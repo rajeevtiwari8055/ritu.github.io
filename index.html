@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajeev Tiwari | Data Analytics Portfolio</title>
+<title>Ritu | Data Analytics Portfolio</title>
 
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -137,6 +137,45 @@ footer .foot-links a:hover::after{
   .hero-content h1{font-size:40px;}
   nav ul{display:none;}
 }
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media(max-width:900px){
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(179,136,255,0.95);
+    position: absolute;
+    top: 70px; /* navbar height */
+    right: 0;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  nav ul li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  nav ul li a {
+    padding: 12px 20px;
+    display: block;
+    color: #fff;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav ul.show {
+    display: flex;
+  }
+}
 </style>
 </head>
 
@@ -145,6 +184,8 @@ footer .foot-links a:hover::after{
 <!-- NAV -->
 <nav>
 <h2 style="color:#fff">Ritu</h2>
+<div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i>
+</div>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About Me</a></li>
@@ -273,12 +314,19 @@ footer .foot-links a:hover::after{
 <a href="terms.html" target="_blank">Terms & Conditions</a> | 
 <a href="privacy.html" target="_blank">Privacy Policy</a>
 </div>
-<p>© <span id="year"></span> Rajeev Tiwari | Data Analytics Portfolio</p>
+<p>© <span id="year"></span> Ritu's website | All rights reserved</p>
 </footer>
 
 <script>
 // DYNAMIC YEAR
 document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+function toggleMenu() {
+  const navUl = document.querySelector('nav ul');
+  navUl.classList.toggle('show');
+}
 </script>
 
 </body>
