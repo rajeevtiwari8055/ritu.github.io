@@ -537,6 +537,23 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 </script>
 
+<script>
+function toggleMenu() {
+  const navUl = document.querySelector('nav ul');
+  navUl.classList.toggle('show');
+}
+</script>
+
+<script>
+  // Force page to start from top (Home)
+  window.onload = function () {
+    if (window.location.hash) {
+      window.location.hash = "";
+      window.scrollTo(0, 0);
+    }
+  };
+</script>
+
 </body>
 </html>
 
