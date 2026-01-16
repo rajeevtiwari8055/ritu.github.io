@@ -176,6 +176,124 @@ footer .foot-links a:hover::after{
     display: flex;
   }
 }
+
+/* ===== GRID / CHECKBOX BACKGROUND (SIDE ONLY) ===== */
+.section-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 45%;              /* half se bhi kam */
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(179,136,255,0.18) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(179,136,255,0.18) 1px,
+      transparent 1px
+    );
+  background-size: 38px 38px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* RIGHT SIDE */
+.section-bg.right {
+  right: 0;
+}
+
+/* LEFT SIDE */
+.section-bg.left {
+  left: 0;
+}
+
+/* Content always upar */
+section > *:not(.section-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section base */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mobile pe hide */
+@media(max-width:900px){
+  .section-bg{
+    display:none;
+  }
+}
+
+/* CSS icons */
+.small-icon img {
+  width: 30px;   /* apni desired width */
+  height: 30px;  /* apni desired height */
+  vertical-align: middle; /* text ke sath align karne ke liye */
+}
+
+.typing-text{
+  font-family:'Fira Code', monospace;
+  font-size:24px;
+  font-weight:500;
+  color:#b388ff;
+}
+
+.cursor{
+  display:inline-block;
+  width:2px;
+  height:1.2em;
+  background:#b388ff;
+  margin-left:5px;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  0%,50%,100%{opacity:1;}
+  25%,75%{opacity:0;}
+}
+
+.typing-skill{
+  font-family:'Poppins', sans-serif;
+  font-size:18px;
+  font-weight:400;
+  color:#fff;
+  letter-spacing:1px;
+}
+
+.dynamic-text {
+  border-right: 2px solid #b388ff;; /* blinking cursor */
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  font-weight: 600px;
+  color: #b388ff;; /* cursor & text color */
+}
+
+.floating-dots span{
+  position:fixed;
+  width:6px;
+  height:6px;
+  background:#b388ff;
+  border-radius:50%;
+  animation:float 10s linear infinite;
+  opacity:.6;
+}
+
+.floating-dots span:nth-child(1){left:10%;animation-delay:0s;}
+.floating-dots span:nth-child(2){left:30%;animation-delay:2s;}
+.floating-dots span:nth-child(3){left:60%;animation-delay:4s;}
+.floating-dots span:nth-child(4){left:80%;animation-delay:6s;}
+
+@keyframes float{
+  0%{bottom:-10px}
+  100%{bottom:110%}
+}
 </style>
 </head>
 
@@ -183,9 +301,9 @@ footer .foot-links a:hover::after{
 
 <!-- NAV -->
 <nav>
+<!-- Your heading -->
 <h2 style="color:#fff">Ritu</h2>
-<div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i>
-</div>
+<div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About Me</a></li>
@@ -198,47 +316,63 @@ footer .foot-links a:hover::after{
 </ul>
 </nav>
 
+<div class="floating-dots">
+  <span></span><span></span><span></span><span></span>
+</div>
+
 <!-- HERO -->
 <section id="home">
 <div class="hero-content">
+<h1 class="typing-text"><span id="typing"></span></h1>
 <h1>Data Analytics <br>& Business Intelligence</h1>
-<p>Excel | SQL | Power BI | Python | Automation</p>
+<p class="typing-skill"><span id="skill-typing"></span></p>
 <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank"><button class="btn">LinkedIn</button></a>
 </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
+<div class="section-bg right"></div>
 <img src="https://pbs.twimg.com/media/FM8NxEJVIAE2lzX.jpg">
 <div class="about-text">
-<h2>About Me</h2>
+<h2><span class="dynamic-text"></span></h2>
 <p>I am a passionate Data Analyst with hands-on experience in Excel, SQL, Power BI, Python, and automation. I specialize in transforming raw data into actionable business insights and reporting dashboards that drive decisions.</p>
 <p>Over time, I have worked on various analytics projects involving data cleaning, visualization, and predictive modeling. This portfolio highlights my skills, certifications, and real-world projects. You can explore my work below.</p>
+<p style="color:inherit">Learning Phase: Actively Building Skills in Python</p>
+<p style="color:inherit">Domain: Business Intelligence, Data Analytics & MIS Reporting</p>
+<p style="color:inherit">City: Kolkata, India</p>
+<p style="color:inherit">Languages: English, Hindi</p>
+<p><a href="mailto:rajeevtiwari8055@gmail.com?subject=Hi%20Rajeev&body=I%20visited%20your%20website%20and%20wanted%20to%20connect%20with%20you!" style="color: inherit; text-decoration: none;"><i class="fas fa-envelope"></i> rajeevtiwari8055@gmail.com</a></p>
 <a href="Rajeev.pdf" target="_blank" rel="noopener noreferrer"><button class="btn">Download Resume</button></a>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
+<div class="section-bg left"></div>
 <h2>Skills</h2>
 <div class="cards">
 <div class="card">
 <div class="skill"><span>Excel<b>95%</b></span><div class="bar"><div style="width:95%"></div></div></div>
 <div class="skill"><span>SQL<b>90%</b></span><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill"><span class="small-icon"><img src="images/Excel.svg" alt="Power BI"><img src="images/SQL.svg" alt="Power BI"></span></div>
 </div>
 <div class="card">
 <div class="skill"><span>Power BI<b>85%</b></span><div class="bar"><div style="width:85%"></div></div></div>
 <div class="skill"><span>Power Query<b>92%</b></span><div class="bar"><div style="width:92%"></div></div></div>
+<div class="skill"><span class="small-icon"><img src="images/Power BI.svg" alt="Power BI"><img src="images/Power Pivot.svg" alt="Power BI"></span></div>
 </div>
 <div class="card">
 <div class="skill"><span>Python<b>80%</b></span><div class="bar"><div style="width:80%"></div></div></div>
 <div class="skill"><span>Automation<b>88%</b></span><div class="bar"><div style="width:88%"></div></div></div>
+<div class="skill"><span class="small-icon"><img src="images/Python.svg" alt="Power BI"><img src="images/Perplexity.svg" alt="Power BI"></span></div>
 </div>
 </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
+<div class="section-bg right"></div>
 <h2>Experience</h2>
 <div class="cards">
 <div class="card">
@@ -254,6 +388,7 @@ footer .foot-links a:hover::after{
 
 <!-- EDUCATION -->
 <section id="education">
+<div class="section-bg left"></div>
 <h2>Education</h2>
 <div class="cards">
 <div class="card">
@@ -269,36 +404,39 @@ footer .foot-links a:hover::after{
 
 <!-- PROJECTS -->
 <section id="projects">
+<div class="section-bg right"></div>
 <h2>Projects</h2>
 <div class="cards">
-<div class="card"><img src="https://www.computerworld.com/wp-content/uploads/2025/05/1656594-0-68082700-1748257438-excel-cheat-sheet-primary-2000px.jpg?quality=50&strip=all&w=1024"><h3>Excel</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
-<div class="card"><img src="https://www.simplydynamics.com/wp-content/uploads/2022/04/Power-BI.jpg"><h3>Power BI</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
-<div class="card"><img src="https://severalnines.com/wp-content/uploads/2023/12/BLOG-Whats-new-in-SQL-Server-2022.png"><h3>SQL Server</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
-<div class="card"><img src="https://www.developer-tech.com/wp-content/uploads/2025/08/python-in-2025-language-developers-web-development-coding-programming-data-science-research-report-study.jpg"><h3>Python</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
-<div class="card"><img src="https://www.testim.io/wp-content/uploads/2024/02/power_of_ai_blog.jpg"><h3>AI Agents</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
-<div class="card"><img src="https://img.freepik.com/free-vector/ai-technology-microchip-background-vector-digital-transformation-concept_53876-112222.jpg?semt=ais_hybrid&w=740&q=80"><h3>Artificial Intelligence</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
-<div class="card"><img src="https://statics.cdn.200lab.io/2024/10/machine-learning-la-gi.jpeg"><h3>Machine Learning</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
-<div class="card"><img src="https://www.codelattice.com/blog/wp-content/uploads/2026/01/Microsoft_Azure_Cloud_01.png"><h3>Microsoft Azure</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a></div>
+<div class="card"><img src="https://www.computerworld.com/wp-content/uploads/2025/05/1656594-0-68082700-1748257438-excel-cheat-sheet-primary-2000px.jpg?quality=50&strip=all&w=1024"><h3>Excel</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a> <span class="small-icon"> <img src="images/Excel.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://www.simplydynamics.com/wp-content/uploads/2022/04/Power-BI.jpg"><h3>Power BI</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Power BI.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://severalnines.com/wp-content/uploads/2023/12/BLOG-Whats-new-in-SQL-Server-2022.png"><h3>SQL Server</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/SQL.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://www.developer-tech.com/wp-content/uploads/2025/08/python-in-2025-language-developers-web-development-coding-programming-data-science-research-report-study.jpg"><h3>Python</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Python.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://www.testim.io/wp-content/uploads/2024/02/power_of_ai_blog.jpg"><h3>AI Agents</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/OpenAI.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://img.freepik.com/free-vector/ai-technology-microchip-background-vector-digital-transformation-concept_53876-112222.jpg?semt=ais_hybrid&w=740&q=80"><h3>Artificial Intelligence</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Perplexity.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://statics.cdn.200lab.io/2024/10/machine-learning-la-gi.jpeg"><h3>Machine Learning</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/MIS.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://www.codelattice.com/blog/wp-content/uploads/2026/01/Microsoft_Azure_Cloud_01.png"><h3>Microsoft Azure</h3><a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Power Query.svg" alt="Power BI"></span></div>
 </div>
 </section>
 
 <!-- CERTIFICATION -->
 <section id="certification">
+<div class="section-bg left"></div>
 <h2>Certification</h2>
 <div class="cards">
-<div class="card"><img src="https://miro.medium.com/1*WnRXab-sreS-KePoZMYqKQ.jpeg"><h3>IIT Guwahati</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
-<div class="card"><img src="https://media.licdn.com/dms/image/v2/D4D12AQFXbkwFv_t1VA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698724527451?e=2147483647&v=beta&t=8dB8YVlvzI5o4rs5_xDoqwCgJ8twJa-_E55TxxzQaZc"><h3>IIT Kharagpur</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
-<div class="card"><img src="https://www.simplilearn.com/ice9/skillupcertificates/Introduction-to-Generative-AI-Studio.jpg"><h3>IIT Kanpur</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
-<div class="card"><img src="https://miro.medium.com/1*o308qe3XWZNePCd4VQWYCA.jpeg"><h3>IIT Hyderabad</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
-<div class="card"><img src="https://imgv2-2-f.scribdassets.com/img/document/924090749/original/d47f0b1c02/1?v=1"><h3>IIT Roorkee</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
-<div class="card"><img src="https://i.ytimg.com/vi/rLXDx92S-5Y/maxresdefault.jpg"><h3>IIT Dhanbad</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
-<div class="card"><img src="https://blog.jakelee.co.uk/assets/images/banners/github-certification.png"><h3>IIT Patna</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
-<div class="card"><img src="https://media.licdn.com/dms/image/v2/C5612AQH_bg_XkATpIQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1588579463056?e=2147483647&v=beta&t=QA2C4RflB43_JzGxdUcouLZrfJEAYwqwDa6r5zmSGjQ"><h3>IIT Madras</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a></div>
+<div class="card"><img src="https://miro.medium.com/1*WnRXab-sreS-KePoZMYqKQ.jpeg"><h3>IIT Guwahati</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Google.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://media.licdn.com/dms/image/v2/D4D12AQFXbkwFv_t1VA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698724527451?e=2147483647&v=beta&t=8dB8YVlvzI5o4rs5_xDoqwCgJ8twJa-_E55TxxzQaZc"><h3>IIT Kharagpur</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Microsoft.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://www.simplilearn.com/ice9/skillupcertificates/Introduction-to-Generative-AI-Studio.jpg"><h3>IIT Kanpur</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Cloud.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://miro.medium.com/1*o308qe3XWZNePCd4VQWYCA.jpeg"><h3>IIT Hyderabad</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Hackerrank.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://imgv2-2-f.scribdassets.com/img/document/924090749/original/d47f0b1c02/1?v=1"><h3>IIT Roorkee</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Canva.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://i.ytimg.com/vi/rLXDx92S-5Y/maxresdefault.jpg"><h3>IIT Dhanbad</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Tata.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://blog.jakelee.co.uk/assets/images/banners/github-certification.png"><h3>IIT Patna</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/GitViolet.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://media.licdn.com/dms/image/v2/C5612AQH_bg_XkATpIQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1588579463056?e=2147483647&v=beta&t=QA2C4RflB43_JzGxdUcouLZrfJEAYwqwDa6r5zmSGjQ"><h3>IIT Madras</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/LinkedIn.svg" alt="Power BI"></span></div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
+<div class="section-bg right"></div>
 <h2>Contact Me</h2>
 <div class="social">
 <a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -329,5 +467,132 @@ function toggleMenu() {
 }
 </script>
 
+<!-- i'm ritu -->
+<script>
+const textArray = [
+  "Hi I'm Ritu",
+];
+
+let textIndex = 0;
+let charIndex = 0;
+const typingSpeed = 100;
+const eraseSpeed = 50;
+const delayBetween = 1500;
+
+const typingElement = document.getElementById("typing");
+
+function typeText() {
+  if (charIndex < textArray[textIndex].length) {
+    typingElement.textContent += textArray[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeText, typingSpeed);
+  } else {
+    setTimeout(eraseText, delayBetween);
+  }
+}
+
+function eraseText() {
+  if (charIndex > 0) {
+    typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseText, eraseSpeed);
+  } else {
+    textIndex = (textIndex + 1) % textArray.length;
+    setTimeout(typeText, typingSpeed);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", typeText);
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const text = "Excel, SQL, Power BI, Tableau, Python, Automation";
+
+  let charIndex = 0;
+  let isDeleting = false;
+  const speed = 80;
+  const pause = 1200;
+
+  const skillElement = document.getElementById("skill-typing");
+
+  function typeLoop(){
+
+    if(!isDeleting){
+      // Typing
+      if(charIndex < text.length){
+        skillElement.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeLoop, speed);
+      }else{
+        setTimeout(() => isDeleting = true, pause);
+        setTimeout(typeLoop, pause);
+      }
+    }else{
+      // Deleting
+      if(charIndex > 0){
+        skillElement.textContent = text.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(typeLoop, speed / 2);
+      }else{
+        isDeleting = false;
+        setTimeout(typeLoop, 400);
+      }
+    }
+
+  }
+
+  typeLoop();
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const aboutTextElements = document.querySelectorAll('.dynamic-text');
+
+  // About Me ke liye text yaha define karo
+  const aboutTexts = [
+    "About Me",
+    "Analytics & BI Expert..."
+  ];
+
+  aboutTextElements.forEach(el => {
+    let aboutIndex = 0;
+    let charIndex = 0;
+
+    function typeAbout() {
+      el.textContent = aboutTexts[aboutIndex].substring(0, charIndex);
+
+      if (charIndex < aboutTexts[aboutIndex].length) {
+        charIndex++;
+        setTimeout(typeAbout, 100);
+      } else {
+        setTimeout(deleteAbout, 2000);
+      }
+    }
+
+    function deleteAbout() {
+      el.textContent = aboutTexts[aboutIndex].substring(0, charIndex);
+
+      if (charIndex > 0) {
+        charIndex--;
+        setTimeout(deleteAbout, 50);
+      } else {
+        aboutIndex = (aboutIndex + 1) % aboutTexts.length;
+        setTimeout(typeAbout, 500);
+      }
+    }
+
+    typeAbout(); // start typing for this span
+  });
+});
+</script>
+
 </body>
 </html>
+
+
+
+
