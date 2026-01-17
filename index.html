@@ -89,7 +89,7 @@ section h2::after{content:"";width:80px;height:3px;background:var(--purple);disp
 .social a:hover::after{width:100%;}
 .social a{text-decoration: none !important;}
 
-/* FOOTER */
+/* FOOTER 
 footer{
   padding:20px;
   text-align:center;
@@ -126,6 +126,87 @@ footer .foot-links a:hover{
 
 footer .foot-links a:hover::after{
   width:100%;
+} */
+
+.site-footer{
+  background:#0b1220;   /* dark blue (same family) */
+  padding:40px 80px 30px; /* LEFT–RIGHT space add */
+  color:#fff;
+}
+
+/* QUICK LINKS TITLE */
+.footer-links strong{
+  color:#fff;
+  display:block;
+  margin-bottom:14px;
+  font-size:16px;
+}
+
+/* QUICK LINKS LIST */
+.footer-links a{
+  display:block;              /* ek ke niche ek */
+  width:max-content;
+  margin:6px 0;
+  color:#b388ff;              /* violet by default */
+  text-decoration:none;       /* no underline */
+  position:relative;
+  transition:0.3s;
+}
+
+/* DYNAMIC UNDERLINE (HIDDEN BY DEFAULT) */
+.footer-links a::after,
+.dev-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:#fff;
+  transition:0.4s;
+}
+
+/* HOVER EFFECT */
+.footer-links a:hover{
+  color:#fff;
+}
+
+.footer-links a:hover::after,
+.dev-link:hover::after{
+  width:100%;
+}
+
+/* POLICY LINKS GAP */
+.policy-links{
+  margin-top:14px;
+}
+
+/* PURPLE THIN DIVIDER */
+.footer-divider{
+  height:1px;
+  background:#b388ff;
+  margin:22px 0;
+}
+
+/* BOTTOM ALIGNMENT */
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* DEV LINK */
+.dev-link{
+  color:#b388ff;
+  text-decoration:none;
+  position:relative;
+}
+
+/* HOVER COLOR FOR DEV LINK */
+.dev-link:hover{
+  color:#fff;
 }
 
 /* HERO ANIMATION */
@@ -476,13 +557,43 @@ section {
 </section>
 
 <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-links">
+      <strong>Quick Links</strong>
+
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#certification">Certifications</a>
+      <a href="#contact">Contact</a>
+
+      <div class="policy-links">
+       <strong class="footer-heading">Legal</strong>
+         <a href="terms.html" target="_blank">Terms & Conditions</a>
+         <a href="privacy.html" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+<div class="footer-divider"></div>
+<div class="footer-bottom">
+  <span>© Ritu's website | All rights reserved</span>
+  <span>Website Designed & Developed by<a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" class="dev-link"> Rajeev Dataverse</a></span>
+</div>
+</footer>
+
+<!-- FOOTER 
 <footer>
 <div class="foot-links">
 <a href="terms.html" target="_blank">Terms & Conditions</a> | 
 <a href="privacy.html" target="_blank">Privacy Policy</a>
 </div>
 <p>© <span id="year"></span> Ritu's website | All rights reserved</p>
-</footer>
+</footer> -->
 
 <script>
 // DYNAMIC YEAR
