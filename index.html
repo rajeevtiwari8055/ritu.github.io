@@ -27,14 +27,12 @@ nav{
 }
 nav h2{color:var(--purple-dark);}
 nav ul{display:flex;list-style:none;gap:20px;}
-nav ul li a{text-decoration:none;color:#333;font-size:14px;position:relative;transition:.3s;}
+nav ul li a{text-decoration:none;color:#222222;font-size:14px;position:relative;transition:.3s;}
 nav ul li a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--purple);transition:.4s;}
 nav ul li a:hover::after{width:100%;}
 
 /* Hover: text color change only */
-nav ul li a:hover {
-  color:black;  /* text turns white on hover */
-}
+nav ul li a:hover {color:#262626;}
 
 /* HERO */
 #home{
@@ -46,9 +44,7 @@ nav ul li a:hover {
 .hero-content{animation:slideIn 1.5s ease;}
 .hero-content h1{font-size:52px;margin-bottom:15px;line-height:1.2;letter-spacing:1px;}
 .hero-content p{margin:20px 0;font-size:18px;}
-.btn{
-  padding:14px 38px;border:none;border-radius:30px;font-weight:600;cursor:pointer;background:linear-gradient(135deg,var(--purple),var(--purple-dark));color:white;transition:.4s;box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
+.btn{padding:14px 38px;border:none;border-radius:30px;font-weight:600;cursor:pointer;background:linear-gradient(135deg,var(--purple),var(--purple-dark));color:white;transition:.4s;box-shadow:0 10px 25px rgba(0,0,0,0.2);}
 .btn:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 25px 50px rgba(124,77,255,.6);}
 
 /* SECTIONS */
@@ -461,15 +457,15 @@ section {
 <li style="color:inherit">Languages: English, Hindi</li>
 </ul>
 <br>
-<p><a href="mailto:rajeevtiwari8055@gmail.com?subject=Hi%20Rajeev&body=I%20visited%20your%20website%20and%20wanted%20to%20connect%20with%20you!" style="color: inherit; text-decoration: none;"><i class="fas fa-envelope"></i> rajeevtiwari8055@gmail.com↗</a></p>
-<a href="images/Rajeev.pdf" target="_blank" rel="noopener noreferrer"><button class="btn">Download Resume</button></a>
+<p><a href="mailto:rajeevtiwari8055@gmail.com?subject=Hi%20Rajeev&body=I%20visited%20your%20website%20and%20wanted%20to%20connect%20with%20you!" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#b388ff'" onmouseout="this.style.color='inherit'"><i class="fas fa-envelope"></i> rajeevtiwari8055@gmail.com↗</a></p>
+<a href="images/Rajeev.pdf" target="_blank" rel="noopener noreferrer"><button class="btn">Download Resume ⬇</button></a>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <div class="section-bg left"></div>
-<h2 style="color:#b388ff;;">Skills</h2>
+<h2 style="color:#b388ff;">Skills</h2>
 <p style="text-align:center;">These are some of the skills I've been learning & gradually improving through practice and real-world applications.</p><br>
 <div class="cards">
 <div class="card">
@@ -498,7 +494,7 @@ section {
 <!-- EXPERIENCE -->
 <section id="experience">
 <div class="section-bg right"></div>
-<h2 style="color:#b388ff;;">Experience</h2>
+<h2 style="color:#b388ff;">Experience</h2>
 <p style="text-align:center;">Hands-on experience in Data Analytics gained through personal projects, explore my work and practical experience.</p><br>
 <div class="cards">
 <div class="card">
@@ -659,8 +655,8 @@ section {
 
 <div class="footer-divider"></div>
 <div class="footer-bottom">
-  <span>© <span id="year"></span> Ritu's website | All rights reserved</span>
-  <span>Designed & Developed by<a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" class="dev-link"> Rajeev Dataverse</a></span>
+  <span>© <span id="year"></span> <span style="color: #b388ff;"> Ritu's</span> website | All rights reserved</span>
+  <span>Designed & Developed by<a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank" class="dev-link"> Rajeev Dataverse <i class="fab fa-linkedin-in"></i></a></span>
 </div>
 </footer>
 
