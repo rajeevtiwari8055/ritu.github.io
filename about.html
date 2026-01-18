@@ -155,6 +155,43 @@ section h2::after{content:"";width:60px;height:3px;background:var(--purple);disp
   margin-top: 2px;
   font-weight: 300;
 }
+
+/* Hamburger & mobile nav adjustments */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media(max-width: 900px){
+  nav ul.nav-links {
+    display: none;          /* hide by default on mobile */
+    flex-direction: column;
+    background: rgba(255,255,255,0.15);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(14px);
+    z-index: 999;
+  }
+
+  nav ul.nav-links.show {
+    display: flex;           /* show when hamburger clicked */
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Mobile dropdown link hover effect */
+nav ul.nav-links li a:hover {
+  color: #b388ff; /* purple color on hover */
+}
 </style>
 </head>
 
@@ -162,13 +199,13 @@ section h2::after{content:"";width:60px;height:3px;background:var(--purple);disp
 
 <!-- NAV -->
 <nav>
-<h2 style="color: #fff;">Portfolio Overview</h2>
-<div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-<ul>
-<li><a href="#hero">Home</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+  <h2 style="color: #fff;">Portfolio Overview</h2>
+  <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <!-- Date-Time-Status display -->
@@ -632,6 +669,14 @@ window.onload = typingLoop;
 
   setInterval(updateDateTime, 1000);
   updateDateTime();
+</script>
+
+<script>
+  // Navigation bar
+function toggleMenu(){
+  const navLinks = document.querySelector("nav ul.nav-links");
+  navLinks.classList.toggle("show");
+}
 </script>
 
 </body>
