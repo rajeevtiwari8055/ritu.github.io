@@ -68,7 +68,9 @@ section h2::after{content:"";width:80px;height:3px;background:var(--purple);disp
 /* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
 .card{background:var(--glass);backdrop-filter:blur(14px);border-radius:22px;padding:25px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.12);transition:.5s;position:relative;overflow:hidden;border:1px solid transparent;color:inherit;}
-.card:hover{transform:translateY(-15px);box-shadow:0 35px 70px rgba(179,136,255,.55);border:1px solid #b388ff;color:#b388ff;}
+.card:hover {transform: translateY(-15px);box-shadow: 0 35px 70px rgba(179,136,255,.55);border: 1px solid #b388ff;}
+.card:hover h2,.card:hover h3,.card:hover h4 {color:#b388ff;}
+.card p {color: inherit;}
 .card img{width:100%;height:180px;object-fit:cover;border-radius:15px;}
 .card button{margin-top:15px;padding:10px 28px;border:none;border-radius:25px;background:linear-gradient(135deg,var(--purple),var(--purple-dark));color:white;cursor:pointer;transition:.4s;}
 .card button:hover{transform:scale(1.1) rotate(-2deg);box-shadow:0 15px 30px rgba(124,77,255,.5);color:black;}
@@ -435,7 +437,7 @@ section {
 <h1 class="typing-text"><span id="typing"></span></h1>
 <h1>Data Analytics <br>& Business Intelligence</h1>
 <p class="typing-skill"><span id="skill-typing"></span></p>
-<a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank"><button class="btn">LinkedIn</button></a>
+<a href="https://www.linkedin.com/in/rajeevtiwari8055" target="_blank"><button class="btn">Linked<i class="fab fa-linkedin-in"></i></button></a>
 </div>
 </section>
 
@@ -447,46 +449,46 @@ section {
 <img src="https://pbs.twimg.com/media/FM8NxEJVIAE2lzX.jpg">
 <div class="about-text">
 <h2><span class="dynamic-text"></span></h2>
-<p style="text-align:center;">My resume reflects my skills and learning journey in Data Analysis, while I continue to develop my data skills through hands-on practice and real-world projects.</p><br>
-<p>I am a passionate Data Analyst with hands-on experience in Excel, SQL, Power BI, Python, and automation. I specialize in transforming raw data into actionable business insights and reporting dashboards that drive data-driven business decisions.</p>
-<p>Over time, I have worked on various analytics projects involving data cleaning, visualization, and predictive modeling. This portfolio highlights my skills, certifications, and real-world projects. You can explore my work below for learning outcomes.</p>
+<p>My resume reflects my learning journey in Data Analysis, and I continue to strengthen my data skills through hands-on practice and real-world projects. I am a passionate Data Analyst with practical experience in Excel, SQL, Power BI, Python, and automation, focusing on transforming raw data into actionable business insights and building effective reporting dashboards for data-driven decision-making.</p>
+<p>Over time, I have worked on multiple analytics projects involving data cleaning, visualization, and predictive modeling. This portfolio highlights my skills, certifications, and real-world projects, allowing you to explore my work, understand my learning outcomes, analytical approach, and practical problem-solving abilities.</p>
 <ul>
-<li style="color:inherit">Learning Phase: Actively Building Skills in Python</li>
-<li style="color:inherit">Domain: Business Intelligence, Data Analytics</li>
-<li style="color:inherit">City: Kolkata, India</li>
-<li style="color:inherit">Languages: English, Hindi</li>
+<li style="color:inherit;"><i class="fas fa-graduation-cap"></i> Education: Master of Arts</li>
+<li style="color:inherit;"><i class="fas fa-file-signature"></i> Learning Phase: Building Skills in Python</li>
+<li style="color:inherit;"><i class="fas fa-chart-line"></i> Domain: Business Intelligence, Data Analytics</li>
+<li style="color:inherit;"><i class="fas fa-database"></i> BI Tools: Excel, SQL, Power BI, Python</li>
+<li style="color:inherit;"><i class="fas fa-map-marker-alt"></i> City: Kolkata, India</li>
+<li style="color:inherit;"><i class="fas fa-language"></i> Languages: English, Hindi</li>
+<li><a href="mailto:rajeevtiwari8055@gmail.com?subject=Hi%20Rajeev&body=I%20visited%20your%20website%20and%20wanted%20to%20connect%20with%20you!" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#b388ff'" onmouseout="this.style.color='inherit'"><i class="fas fa-envelope"></i> rajeevtiwari8055@gmail.com↗</a></li>
 </ul>
-<br>
-<p><a href="mailto:rajeevtiwari8055@gmail.com?subject=Hi%20Rajeev&body=I%20visited%20your%20website%20and%20wanted%20to%20connect%20with%20you!" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#b388ff'" onmouseout="this.style.color='inherit'"><i class="fas fa-envelope"></i> rajeevtiwari8055@gmail.com↗</a></p>
-<a href="images/Rajeev.pdf" target="_blank" rel="noopener noreferrer"><button class="btn">Download Resume ⬇</button></a>
+<button class="btn"><a href="images/Rajeev.pdf" style="color: inherit; text-decoration: none;" target="_blank" rel="noopener noreferrer">Download Resume <i class="fas fa-address-card"></i></button></a>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <div class="section-bg left"></div>
-<h2 style="color:#b388ff;">Skills</h2>
+<h2 style="color:#b388ff;">Skills <i class="fas fa-lightbulb"></i></h2>
 <p style="text-align:center;">These are some of the skills I've been learning & gradually improving through practice and real-world applications.</p><br>
 <div class="cards">
 <div class="card">
 <div class="skill"><span>Excel<b>95%</b></span><div class="bar"><div style="width:95%"></div></div></div>
 <div class="skill"><span>SQL<b>90%</b></span><div class="bar"><div style="width:90%"></div></div></div>
-<div class="skill"><span class="small-icon"><img src="images/Excel.svg" alt="Power BI"><img src="images/SQL.svg" alt="Power BI"></span></div>
+<div class="skill"><span class="small-icon"><i class="fas fa-file-excel"></i><i class="fas fa-tachometer-alt"></i><i class="fas fa-database"></i></span></div>
 </div>
 <div class="card">
 <div class="skill"><span>Power BI<b>85%</b></span><div class="bar"><div style="width:85%"></div></div></div>
 <div class="skill"><span>Power Query<b>92%</b></span><div class="bar"><div style="width:92%"></div></div></div>
-<div class="skill"><span class="small-icon"><img src="images/Power BI.svg" alt="Power BI"><img src="images/Power Pivot.svg" alt="Power BI"></span></div>
+<div class="skill"><span class="small-icon"><i class="fas fa-chart-bar"></i><i class="fas fa-chart-pie"></i><i class="fas fa-filter"></i></span></div>
 </div>
 <div class="card">
 <div class="skill"><span>Python<b>80%</b></span><div class="bar"><div style="width:80%"></div></div></div>
 <div class="skill"><span>Automation<b>88%</b></span><div class="bar"><div style="width:88%"></div></div></div>
-<div class="skill"><span class="small-icon"><img src="images/Python.svg" alt="Power BI"><img src="images/Perplexity.svg" alt="Power BI"></span></div>
+<div class="skill"><span class="small-icon"><i class="fab fa-python"></i><i class="fas fa-robot"></i><i class="fas fa-cogs"></i></span></div>
 </div>
 <div class="card">
 <div class="skill"><span>Microsoft 365<b>85%</b></span><div class="bar"><div style="width:80%"></div></div></div>
 <div class="skill"><span>Tableau<b>90%</b></span><div class="bar"><div style="width:88%"></div></div></div>
-<div class="skill"><span class="small-icon"><img src="images/Microsoft365.svg" alt="Power BI"><img src="images/Tableau.svg" alt="Power BI"></span></div>
+<div class="skill"><span class="small-icon"><i class="fab fa-microsoft"></i><i class="fas fa-chart-line"></i><i class="fas fa-chart-area"></i></span></div>
 </div>
 </div>
 </section>
@@ -494,35 +496,33 @@ section {
 <!-- EXPERIENCE -->
 <section id="experience">
 <div class="section-bg right"></div>
-<h2 style="color:#b388ff;">Experience</h2>
+<h2 style="color:#b388ff;">Experience <i class="fas fa-briefcase"></i></h2>
 <p style="text-align:center;">Hands-on experience in Data Analytics gained through personal projects, explore my work and practical experience.</p><br>
 <div class="cards">
 <div class="card">
-<h3>Data Analyst</h3>
+<h3>Data Analyst Intern <i class="fas fa-user-edit"></i></h3>
 <h4>Google | <span>2020 - 2022</span></h4><br>
 <p>Executed data analytics projects with cleaning, visualization, dashboards & reporting using Excel, Power Query, SQL, Power BI & Tableau, while creating web projects.</p><br>
-<h4 style="font-weight: 600; color: inherit; font-size: 1rem;">Responsibilities / Work Highlights:</h4><br>
+<h4 style="font-weight: 600; font-size: 1rem;">Responsibilities <i class="fas fa-tasks"></i></h4><br>
 <ul>
-<li><span style="color:green">✔</span> Completed end-to-end data analytics projects delivering business insights</li>
-<li><span style="color:green">✔</span> Performed data cleaning, transformation & visualization using Excel, Power Query & SQL</li>
-<li><span style="color:green">✔</span> Developed dashboards & automated reports in Power BI, Tableau & Access</li>
-<li><span style="color:green">✔</span> Designed web projects using HTML, CSS & JavaScript for portfolio development</li>
-<li><span style="color:green">✔</span> Enhanced storytelling, documentation & business presentation skills using Microsoft 365</li>
-<li><span style="color:red">✖</span> No fake projects, copied dashboards, manipulated data, or misleading claims used for showcasing skills</li>
+<li>Completed end-to-end data analytics projects delivering business insights</li>
+<li>Performed data cleaning, transformation & visualization using Excel, Power Query & SQL</li>
+<li>Developed dashboards & automated reports in Power BI, Tableau & Access</li>
+<li>Designed web projects using HTML, CSS & JavaScript for portfolio development</li>
+<li>Enhanced storytelling, documentation & business presentation skills using Microsoft 365</li>
 </ul>
 </div>
 <div class="card">
-<h3>Web Developer Intern</h3>
+<h3>Web Developer Intern <i class="fas fa-code"></i></h3>
 <h4>Rajeev Dataverse | <span>2026 - Present</span></h4><br>
 <p>Founder of a self-initiated learning platform on Data Analytics, Automation & BI. I create and share content while building and engaging a community of learners.</p><br>
-<h4 style="font-weight: 600; color: inherit; font-size: 1rem;">Responsibilities / Work Highlights:</h4><br>
+<h4 style="font-weight: 600; font-size: 1rem;">Responsibilities <i class="fas fa-tasks"></i></h4><br>
 <ul>
-<li><span style="color:green">✔</span> Completed end-to-end data analytics projects delivering business insights</li>
-<li><span style="color:green">✔</span> Performed data cleaning, transformation & visualization using Excel, Power Query & SQL</li>
-<li><span style="color:green">✔</span> Developed dashboards & automated reports in Power BI, Tableau & Access</li>
-<li><span style="color:green">✔</span> Designed web projects using HTML, CSS & JavaScript for portfolio development</li>
-<li><span style="color:green">✔</span> Enhanced storytelling, documentation & business presentation skills using Microsoft 365</li>
-<li><span style="color:red">✖</span> No fake projects, copied dashboards, manipulated data, or misleading claims used for showcasing skills</li>
+<li>Completed end-to-end data analytics projects delivering business insights</li>
+<li>Performed data cleaning, transformation & visualization using Excel, Power Query & SQL</li>
+<li>Developed dashboards & automated reports in Power BI, Tableau & Access</li>
+<li>Designed web projects using HTML, CSS & JavaScript for portfolio development</li>
+<li>Enhanced storytelling, documentation & business presentation skills using Microsoft 365</li>
 </ul>
 </div>
 </div>
@@ -531,19 +531,31 @@ section {
 <!-- EDUCATION -->
 <section id="education">
 <div class="section-bg left"></div>
-<h2 style="color:#b388ff;">Education</h2>
+<h2 style="color:#b388ff;">Education <i class="fas fa-user-graduate"></i></h2>
 <p style="text-align:center;">I have completed my school education followed by undergraduate studies, & I'm continuously enhancing my skills & technical knowledge.</p><br>
 <div class="cards">
 <div class="card">
-<h3>Bachelor of Computer Applications</h3>
+<h3>Bachelor of Computer Applications <i class="fas fa-desktop"></i></h3>
 <h4>IIT Guwahati | <span>2020 - 2023</span></h4><br>
 <p>- Data Analytics Program<br>- Excel, SQL, Power BI Training<br>- Hands-on Projects</p><br>
 <p>Grade: First class distinction.</p>
 </div>
 <div class="card">
-<h3>Master of Computer Applications</h3>
+<h3>Master of Computer Applications <i class="fas fa-laptop-code"></i></h3>
 <h4>IIT Madras | <span>2023 - 2025</span></h4><br>
-<p>- Master Degree in Computer Applications<br>- Python & Machine Learning Courses<br>- Academic Projects</p><br>
+<p>- Programming & Web Development<br>- Python & Machine Learning<br>- Academic Projects</p><br>
+<p>Grade: First class distinction.</p>
+</div>
+<div class="card">
+<h3>Senior Secondary Education - XII <i class="fas fa-book-open"></i></h3>
+<h4>St. Thomas’ International Academy | <span>2014 - 2016</span></h4><br>
+<p>- Physics<br>- Chemistry<br>- Maths</p><br>
+<p>Grade: First class distinction.</p>
+</div>
+<div class="card">
+<h3>Secondary Education - X  <i class="fas fa-book-open"></i></h3>
+<h4>St. Francis Xavier Academy | <span>2012 - 2016</span></h4><br>
+<p>- Science<br>- General Studies<br>- Commerce</p><br>
 <p>Grade: First class distinction.</p>
 </div>
 </div>
@@ -552,7 +564,7 @@ section {
 <!-- PROJECTS -->
 <section id="projects">
 <div class="section-bg right"></div>
-<h2 style="color:#b388ff;">Projects</h2>
+<h2 style="color:#b388ff;">Projects <i class="fas fa-folder-open"></i></h2>
 <p style="text-align:center;">Below are the sample Data Analytics projects on AI, Excel, Power Query, MIS, Access, SQL, Power BI, Tableau, Python & Web Development.</p><br>
 <div class="cards">
 <div class="card"><img src="https://www.computerworld.com/wp-content/uploads/2025/05/1656594-0-68082700-1748257438-excel-cheat-sheet-primary-2000px.jpg?quality=50&strip=all&w=1024"><h3>Excel</h3>
@@ -592,7 +604,7 @@ section {
 <!-- CERTIFICATION -->
 <section id="certification">
 <div class="section-bg left"></div>
-<h2 style="color:#b388ff">Certification</h2>
+<h2 style="color:#b388ff">Certification <i class="fas fa-award"></i></h2>
 <p style="text-align:center;">Here are some of my professional Certification showcasing my skills and expertise. Education is the most powerful weapon in the world.</p><br>
 <div class="cards">
 <div class="card"><img src="https://miro.medium.com/1*WnRXab-sreS-KePoZMYqKQ.jpeg"><h3>IIT Guwahati</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Google.svg" alt="Power BI"></span></div>
@@ -609,7 +621,7 @@ section {
 <!-- CONTACT -->
 <section id="contact">
 <div class="section-bg right"></div>
-<h2 style="color:#b388ff;">Contact Me</h2>
+<h2 style="color:#b388ff;">Contact Me <i class="fas fa-user-tie"></i></h2>
 <p style="text-align:center;">Feel free to connect with me directly using the icons below for professional networking, collaboration, and career opportunities.</p><br>
 <!-- LinkedIn Official Profile Badge Code (Centered) -->
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
@@ -637,7 +649,7 @@ section {
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-links">
-      <strong>Quick Links</strong>
+      <strong>Quick Links <i class="fas fa-link"></i></strong>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
@@ -646,7 +658,7 @@ section {
       <a href="#certification">Certifications</a>
 
       <div class="policy-links">
-       <strong class="footer-heading">Legal</strong>
+        <strong class="footer-heading">Legal <i class="fas fa-gavel"></i></strong>
          <a href="terms.html" target="_blank">Terms & Conditions</a>
          <a href="privacy.html" target="_blank">Privacy Policy</a>
       </div>
