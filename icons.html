@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Icon Library – Dark UI</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:black;
+  color:#b388ff;
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== HEADER ===== */
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+
+header h1{
+  font-size:2.4rem;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+header p{
+  opacity:.7;
+  margin-top:8px;
+}
+
+/* ===== ICON GRID ===== */
+.icon-container{
+  max-width:1400px;
+  margin:auto;
+  padding:40px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:22px;
+}
+
+/* ===== ICON CARD ===== */
+.icon-card{
+  position:relative;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(14px);
+  border-radius:18px;
+  padding:28px 20px;
+  text-align:center;
+  cursor:pointer;
+  transition:all .4s ease;
+  border:1px solid rgba(255,255,255,0.08);
+  overflow:hidden;
+}
+
+.icon-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.15),transparent);
+  opacity:0;
+  transition:.4s;
+}
+
+.icon-card:hover::before{
+  opacity:1;
+}
+
+.icon-card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 0 25px rgba(179,136,255,.45);
+  border-color:#b388ff;
+}
+
+/* ===== ICON ===== */
+.icon-card i{
+  font-size:34px;
+  margin-bottom:14px;
+  color:#b388ff;
+  transition:.4s;
+}
+
+.icon-card:hover i{
+  transform:rotateY(360deg) scale(1.2);
+  color:white;
+}
+
+/* ===== LABEL ===== */
+.icon-card span{
+  display:block;
+  font-size:.9rem;
+  opacity:.85;
+  letter-spacing:.4px;
+}
+
+/* ===== FLOATING EFFECT ===== */
+.icon-card{
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.5;
+  font-size:.85rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Icon Library – Dark UI</h1>
+  <p>Study • LinkedIn • Projects • Data • Web • Code • Career</p>
+</header>
+
+<section class="icon-container">
+
+  <!-- NAVIGATION & UI -->
+  <div class="icon-card"><i class="fas fa-bars"></i><span>Menu</span></div>
+  <div class="icon-card"><i class="fas fa-th-large"></i><span>Dashboard</span></div>
+  <div class="icon-card"><i class="fas fa-layer-group"></i><span>Sections</span></div>
+  <div class="icon-card"><i class="fas fa-compass"></i><span>Navigation</span></div>
+  <div class="icon-card"><i class="fas fa-sliders-h"></i><span>Settings</span></div>
+
+  <!-- STUDY & LEARNING -->
+  <div class="icon-card"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+  <div class="icon-card"><i class="fas fa-book-reader"></i><span>Learning</span></div>
+  <div class="icon-card"><i class="fas fa-book-open"></i><span>Study Material</span></div>
+  <div class="icon-card"><i class="fas fa-brain"></i><span>Knowledge</span></div>
+  <div class="icon-card"><i class="fas fa-lightbulb"></i><span>Ideas</span></div>
+  <div class="icon-card"><i class="fas fa-user-graduate"></i><span>Student</span></div>
+  <div class="icon-card"><i class="fas fa-chalkboard-teacher"></i><span>Teaching</span></div>
+
+  <!-- SOCIAL & CONTACT -->
+  <div class="icon-card"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></div>
+  <div class="icon-card"><i class="fab fa-github"></i><span>GitHub</span></div>
+  <div class="icon-card"><i class="fab fa-google"></i><span>Google</span></div>
+  <div class="icon-card"><i class="fas fa-envelope"></i><span>Email</span></div>
+  <div class="icon-card"><i class="fas fa-phone-alt"></i><span>Phone</span></div>
+  <div class="icon-card"><i class="fas fa-comments"></i><span>Chat</span></div>
+  <div class="icon-card"><i class="fas fa-paper-plane"></i><span>Send Message</span></div>
+
+  <!-- LOCATION & LANGUAGE -->
+  <div class="icon-card"><i class="fas fa-map-marker-alt"></i><span>Location</span></div>
+  <div class="icon-card"><i class="fas fa-language"></i><span>Language</span></div>
+  <div class="icon-card"><i class="fas fa-globe"></i><span>Global</span></div>
+  <div class="icon-card"><i class="fas fa-flag"></i><span>Country</span></div>
+
+  <!-- PROJECTS & WORK -->
+  <div class="icon-card"><i class="fas fa-project-diagram"></i><span>Projects</span></div>
+  <div class="icon-card"><i class="fas fa-folder-open"></i><span>Portfolio</span></div>
+  <div class="icon-card"><i class="fas fa-tasks"></i><span>Tasks</span></div>
+  <div class="icon-card"><i class="fas fa-rocket"></i><span>Launch</span></div>
+  <div class="icon-card"><i class="fas fa-clipboard-check"></i><span>Completed</span></div>
+
+  <!-- DATA & ANALYTICS -->
+  <div class="icon-card"><i class="fas fa-database"></i><span>Database</span></div>
+  <div class="icon-card"><i class="fas fa-chart-line"></i><span>Trends</span></div>
+  <div class="icon-card"><i class="fas fa-chart-bar"></i><span>Reports</span></div>
+  <div class="icon-card"><i class="fas fa-chart-pie"></i><span>Analysis</span></div>
+  <div class="icon-card"><i class="fas fa-chart-area"></i><span>Performance</span></div>
+  <div class="icon-card"><i class="fas fa-filter"></i><span>Data Filter</span></div>
+  <div class="icon-card"><i class="fas fa-table"></i><span>Tables</span></div>
+
+  <!-- TECHNOLOGY & CODE -->
+  <div class="icon-card"><i class="fas fa-code"></i><span>Programming</span></div>
+  <div class="icon-card"><i class="fab fa-python"></i><span>Python</span></div>
+  <div class="icon-card"><i class="fab fa-microsoft"></i><span>Microsoft Tools</span></div>
+  <div class="icon-card"><i class="fas fa-file-excel"></i><span>Excel</span></div>
+  <div class="icon-card"><i class="fas fa-tools"></i><span>Development Tools</span></div>
+  <div class="icon-card"><i class="fas fa-cogs"></i><span>Automation</span></div>
+
+  <!-- WEB & SYSTEM -->
+  <div class="icon-card"><i class="fas fa-laptop-code"></i><span>Web Development</span></div>
+  <div class="icon-card"><i class="fas fa-server"></i><span>Server</span></div>
+  <div class="icon-card"><i class="fas fa-cloud"></i><span>Cloud</span></div>
+  <div class="icon-card"><i class="fas fa-desktop"></i><span>Desktop</span></div>
+  <div class="icon-card"><i class="fas fa-laptop"></i><span>System</span></div>
+  <div class="icon-card"><i class="fas fa-mobile-alt"></i><span>Mobile</span></div>
+
+  <!-- AI & FUTURE -->
+  <div class="icon-card"><i class="fas fa-robot"></i><span>Artificial Intelligence</span></div>
+  <div class="icon-card"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+  <div class="icon-card"><i class="fas fa-flask"></i><span>Research</span></div>
+  <div class="icon-card"><i class="fas fa-puzzle-piece"></i><span>Problem Solving</span></div>
+
+  <!-- CAREER & HR -->
+  <div class="icon-card"><i class="fas fa-briefcase"></i><span>Career</span></div>
+  <div class="icon-card"><i class="fas fa-user-tie"></i><span>Professional</span></div>
+  <div class="icon-card"><i class="fas fa-user-check"></i><span>Verification</span></div>
+  <div class="icon-card"><i class="fas fa-id-card"></i><span>Profile</span></div>
+  <div class="icon-card"><i class="fas fa-certificate"></i><span>Certification</span></div>
+  <div class="icon-card"><i class="fas fa-award"></i><span>Awards</span></div>
+
+  <!-- CONTENT & DOCUMENTS -->
+  <div class="icon-card"><i class="fas fa-file-alt"></i><span>Documents</span></div>
+  <div class="icon-card"><i class="fas fa-file-signature"></i><span>Agreements</span></div>
+  <div class="icon-card"><i class="fas fa-clipboard-list"></i><span>Checklist</span></div>
+  <div class="icon-card"><i class="fas fa-edit"></i><span>Edit Content</span></div>
+  <div class="icon-card"><i class="fas fa-list-ul"></i><span>List</span></div>
+
+  <!-- SECURITY & LEGAL -->
+  <div class="icon-card"><i class="fas fa-shield-alt"></i><span>Security</span></div>
+  <div class="icon-card"><i class="fas fa-lock"></i><span>Privacy</span></div>
+  <div class="icon-card"><i class="fas fa-gavel"></i><span>Legal</span></div>
+  <div class="icon-card"><i class="fas fa-balance-scale"></i><span>Compliance</span></div>
+
+  <!-- UTILITIES -->
+  <div class="icon-card"><i class="fas fa-search"></i><span>Search</span></div>
+  <div class="icon-card"><i class="fas fa-sync-alt"></i><span>Refresh</span></div>
+  <div class="icon-card"><i class="fas fa-download"></i><span>Download</span></div>
+  <div class="icon-card"><i class="fas fa-upload"></i><span>Upload</span></div>
+  <div class="icon-card"><i class="fas fa-link"></i><span>External Link</span></div>
+  <div class="icon-card"><i class="fas fa-bolt"></i><span>Fast Action</span></div>
+
+    <!-- BUSINESS & ORGANIZATION -->
+  <div class="icon-card"><i class="fas fa-building"></i><span>Company</span></div>
+  <div class="icon-card"><i class="fas fa-sitemap"></i><span>Organization</span></div>
+  <div class="icon-card"><i class="fas fa-handshake"></i><span>Partnership</span></div>
+  <div class="icon-card"><i class="fas fa-chart-growth"></i><span>Business Growth</span></div>
+  <div class="icon-card"><i class="fas fa-user-friends"></i><span>Team</span></div>
+
+  <!-- MARKETING & SALES -->
+  <div class="icon-card"><i class="fas fa-bullhorn"></i><span>Marketing</span></div>
+  <div class="icon-card"><i class="fas fa-ad"></i><span>Advertising</span></div>
+  <div class="icon-card"><i class="fas fa-funnel-dollar"></i><span>Sales Funnel</span></div>
+  <div class="icon-card"><i class="fas fa-percentage"></i><span>Discount</span></div>
+  <div class="icon-card"><i class="fas fa-shopping-cart"></i><span>E-Commerce</span></div>
+
+  <!-- CONTENT & MEDIA -->
+  <div class="icon-card"><i class="fas fa-camera"></i><span>Photography</span></div>
+  <div class="icon-card"><i class="fas fa-video"></i><span>Video</span></div>
+  <div class="icon-card"><i class="fas fa-microphone"></i><span>Podcast</span></div>
+  <div class="icon-card"><i class="fas fa-newspaper"></i><span>Blog</span></div>
+  <div class="icon-card"><i class="fas fa-pen-nib"></i><span>Content Writing</span></div>
+
+  <!-- DESIGN & UI/UX -->
+  <div class="icon-card"><i class="fas fa-paint-brush"></i><span>Design</span></div>
+  <div class="icon-card"><i class="fas fa-palette"></i><span>UI Colors</span></div>
+  <div class="icon-card"><i class="fas fa-vector-square"></i><span>Wireframe</span></div>
+  <div class="icon-card"><i class="fas fa-bezier-curve"></i><span>UX Flow</span></div>
+
+  <!-- FINANCE -->
+  <div class="icon-card"><i class="fas fa-rupee-sign"></i><span>Finance</span></div>
+  <div class="icon-card"><i class="fas fa-wallet"></i><span>Wallet</span></div>
+  <div class="icon-card"><i class="fas fa-credit-card"></i><span>Payments</span></div>
+  <div class="icon-card"><i class="fas fa-file-invoice"></i><span>Invoice</span></div>
+  <div class="icon-card"><i class="fas fa-calculator"></i><span>Accounting</span></div>
+
+  <!-- HEALTH & WELLNESS -->
+  <div class="icon-card"><i class="fas fa-heartbeat"></i><span>Health</span></div>
+  <div class="icon-card"><i class="fas fa-hospital"></i><span>Hospital</span></div>
+  <div class="icon-card"><i class="fas fa-user-md"></i><span>Doctor</span></div>
+  <div class="icon-card"><i class="fas fa-hand-holding-heart"></i><span>Care</span></div>
+
+  <!-- SUPPORT & HELP -->
+  <div class="icon-card"><i class="fas fa-life-ring"></i><span>Support</span></div>
+  <div class="icon-card"><i class="fas fa-question-circle"></i><span>Help</span></div>
+  <div class="icon-card"><i class="fas fa-info-circle"></i><span>Information</span></div>
+  <div class="icon-card"><i class="fas fa-headset"></i><span>Customer Care</span></div>
+
+  <!-- TIME & PRODUCTIVITY -->
+  <div class="icon-card"><i class="fas fa-clock"></i><span>Time</span></div>
+  <div class="icon-card"><i class="fas fa-calendar-alt"></i><span>Calendar</span></div>
+  <div class="icon-card"><i class="fas fa-stopwatch"></i><span>Deadline</span></div>
+  <div class="icon-card"><i class="fas fa-check-double"></i><span>Productivity</span></div>
+
+  <!-- ENVIRONMENT & SOCIAL -->
+  <div class="icon-card"><i class="fas fa-seedling"></i><span>Environment</span></div>
+  <div class="icon-card"><i class="fas fa-recycle"></i><span>Recycling</span></div>
+  <div class="icon-card"><i class="fas fa-leaf"></i><span>Green Energy</span></div>
+  <div class="icon-card"><i class="fas fa-hands-helping"></i><span>Social Work</span></div>
+
+  <!-- TRAVEL & MAP -->
+  <div class="icon-card"><i class="fas fa-plane"></i><span>Travel</span></div>
+  <div class="icon-card"><i class="fas fa-route"></i><span>Route</span></div>
+  <div class="icon-card"><i class="fas fa-map"></i><span>Map</span></div>
+  <div class="icon-card"><i class="fas fa-hotel"></i><span>Hotel</span></div>
+
+  <!-- COMMUNICATION & COLLABORATION -->
+<div class="icon-card"><i class="fas fa-users"></i><span>Team</span></div>
+<div class="icon-card"><i class="fas fa-user-friends"></i><span>Community</span></div>
+<div class="icon-card"><i class="fas fa-handshake"></i><span>Collaboration</span></div>
+<div class="icon-card"><i class="fas fa-video"></i><span>Video Call</span></div>
+<div class="icon-card"><i class="fas fa-microphone"></i><span>Voice</span></div>
+
+<!-- BUSINESS & MANAGEMENT -->
+<div class="icon-card"><i class="fas fa-chart-network"></i><span>Strategy</span></div>
+<div class="icon-card"><i class="fas fa-coins"></i><span>Finance</span></div>
+<div class="icon-card"><i class="fas fa-wallet"></i><span>Budget</span></div>
+<div class="icon-card"><i class="fas fa-file-invoice"></i><span>Invoice</span></div>
+<div class="icon-card"><i class="fas fa-bullseye"></i><span>Target</span></div>
+
+<!-- DESIGN & CREATIVE -->
+<div class="icon-card"><i class="fas fa-paint-brush"></i><span>Design</span></div>
+<div class="icon-card"><i class="fas fa-palette"></i><span>Creativity</span></div>
+<div class="icon-card"><i class="fas fa-image"></i><span>Graphics</span></div>
+<div class="icon-card"><i class="fas fa-icons"></i><span>Icons</span></div>
+<div class="icon-card"><i class="fas fa-font"></i><span>Typography</span></div>
+
+<!-- DEVELOPMENT STACK -->
+<div class="icon-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
+<div class="icon-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+<div class="icon-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+<div class="icon-card"><i class="fab fa-react"></i><span>React</span></div>
+<div class="icon-card"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+
+<!-- DATABASE & BACKEND -->
+<div class="icon-card"><i class="fas fa-database"></i><span>SQL</span></div>
+<div class="icon-card"><i class="fas fa-code-branch"></i><span>Version Control</span></div>
+<div class="icon-card"><i class="fab fa-git-alt"></i><span>Git</span></div>
+<div class="icon-card"><i class="fas fa-terminal"></i><span>Terminal</span></div>
+<div class="icon-card"><i class="fas fa-bug"></i><span>Debugging</span></div>
+
+<!-- PRODUCTIVITY -->
+<div class="icon-card"><i class="fas fa-clock"></i><span>Time Management</span></div>
+<div class="icon-card"><i class="fas fa-calendar-alt"></i><span>Schedule</span></div>
+<div class="icon-card"><i class="fas fa-check-double"></i><span>Productivity</span></div>
+<div class="icon-card"><i class="fas fa-layer-group"></i><span>Workflow</span></div>
+<div class="icon-card"><i class="fas fa-stream"></i><span>Process</span></div>
+
+<!-- MARKETING & GROWTH -->
+<div class="icon-card"><i class="fas fa-bullhorn"></i><span>Marketing</span></div>
+<div class="icon-card"><i class="fas fa-puzzle-piece"></i><span>Growth</span></div>
+<div class="icon-card"><i class="fas fa-hashtag"></i><span>Hashtags</span></div>
+<div class="icon-card"><i class="fas fa-ad"></i><span>Ads</span></div>
+<div class="icon-card"><i class="fas fa-thumbs-up"></i><span>Engagement</span></div>
+
+<!-- LEARNING ADVANCED -->
+<div class="icon-card"><i class="fas fa-laptop"></i><span>Online Learning</span></div>
+<div class="icon-card"><i class="fas fa-question-circle"></i><span>Q&A</span></div>
+<div class="icon-card"><i class="fas fa-book"></i><span>Reference</span></div>
+<div class="icon-card"><i class="fas fa-award"></i><span>Achievement</span></div>
+<div class="icon-card"><i class="fas fa-medal"></i><span>Milestone</span></div>
+
+<!-- FUTURE TECH -->
+<div class="icon-card"><i class="fas fa-microchip"></i><span>AI Chips</span></div>
+<div class="icon-card"><i class="fas fa-network-wired"></i><span>Networking</span></div>
+<div class="icon-card"><i class="fas fa-vr-cardboard"></i><span>Virtual Reality</span></div>
+<div class="icon-card"><i class="fas fa-atom"></i><span>Innovation</span></div>
+<div class="icon-card"><i class="fas fa-infinity"></i><span>Scalability</span></div>
+
+<!-- UI / INTERACTION -->
+<div class="icon-card"><i class="fas fa-mouse-pointer"></i><span>Click</span></div>
+<div class="icon-card"><i class="fas fa-hand-pointer"></i><span>Select</span></div>
+<div class="icon-card"><i class="fas fa-expand"></i><span>Expand</span></div>
+<div class="icon-card"><i class="fas fa-compress"></i><span>Collapse</span></div>
+<div class="icon-card"><i class="fas fa-random"></i><span>Shuffle</span></div>
+
+<!-- FILE & STORAGE -->
+<div class="icon-card"><i class="fas fa-file-pdf"></i><span>PDF</span></div>
+<div class="icon-card"><i class="fas fa-file-word"></i><span>Word</span></div>
+<div class="icon-card"><i class="fas fa-file-powerpoint"></i><span>PPT</span></div>
+<div class="icon-card"><i class="fas fa-file-archive"></i><span>ZIP</span></div>
+<div class="icon-card"><i class="fas fa-hdd"></i><span>Storage</span></div>
+
+<!-- MEDIA -->
+<div class="icon-card"><i class="fas fa-play-circle"></i><span>Play</span></div>
+<div class="icon-card"><i class="fas fa-pause-circle"></i><span>Pause</span></div>
+<div class="icon-card"><i class="fas fa-stop-circle"></i><span>Stop</span></div>
+<div class="icon-card"><i class="fas fa-volume-up"></i><span>Sound</span></div>
+<div class="icon-card"><i class="fas fa-camera"></i><span>Camera</span></div>
+
+<!-- SYSTEM ACTIONS -->
+<div class="icon-card"><i class="fas fa-power-off"></i><span>Power</span></div>
+<div class="icon-card"><i class="fas fa-battery-full"></i><span>Battery</span></div>
+<div class="icon-card"><i class="fas fa-wifi"></i><span>WiFi</span></div>
+<div class="icon-card"><i class="fas fa-signal"></i><span>Signal</span></div>
+<div class="icon-card"><i class="fas fa-bluetooth"></i><span>Bluetooth</span></div>
+
+<!-- USER ACTIONS -->
+<div class="icon-card"><i class="fas fa-user-plus"></i><span>Add User</span></div>
+<div class="icon-card"><i class="fas fa-user-minus"></i><span>Remove User</span></div>
+<div class="icon-card"><i class="fas fa-user-lock"></i><span>User Lock</span></div>
+<div class="icon-card"><i class="fas fa-user-clock"></i><span>User Time</span></div>
+<div class="icon-card"><i class="fas fa-user-cog"></i><span>User Settings</span></div>
+
+<!-- NAVIGATION -->
+<div class="icon-card"><i class="fas fa-arrow-up"></i><span>Up</span></div>
+<div class="icon-card"><i class="fas fa-arrow-down"></i><span>Down</span></div>
+<div class="icon-card"><i class="fas fa-arrow-left"></i><span>Left</span></div>
+<div class="icon-card"><i class="fas fa-arrow-right"></i><span>Right</span></div>
+<div class="icon-card"><i class="fas fa-location-arrow"></i><span>Direction</span></div>
+
+<!-- ALERTS -->
+<div class="icon-card"><i class="fas fa-exclamation-circle"></i><span>Warning</span></div>
+<div class="icon-card"><i class="fas fa-info-circle"></i><span>Info</span></div>
+<div class="icon-card"><i class="fas fa-check-circle"></i><span>Success</span></div>
+<div class="icon-card"><i class="fas fa-times-circle"></i><span>Error</span></div>
+<div class="icon-card"><i class="fas fa-bell"></i><span>Notification</span></div>
+
+<!-- E-COMMERCE -->
+<div class="icon-card"><i class="fas fa-shopping-cart"></i><span>Cart</span></div>
+<div class="icon-card"><i class="fas fa-shopping-bag"></i><span>Shop</span></div>
+<div class="icon-card"><i class="fas fa-credit-card"></i><span>Payment</span></div>
+<div class="icon-card"><i class="fas fa-receipt"></i><span>Receipt</span></div>
+<div class="icon-card"><i class="fas fa-truck"></i><span>Delivery</span></div>
+
+<!-- TIME & EVENTS -->
+<div class="icon-card"><i class="fas fa-hourglass-half"></i><span>Loading</span></div>
+<div class="icon-card"><i class="fas fa-stopwatch"></i><span>Timer</span></div>
+<div class="icon-card"><i class="fas fa-calendar-check"></i><span>Event</span></div>
+<div class="icon-card"><i class="fas fa-calendar-times"></i><span>Cancel Event</span></div>
+<div class="icon-card"><i class="fas fa-history"></i><span>History</span></div>
+
+<!-- DATA & CONTROLS -->
+<div class="icon-card"><i class="fas fa-sort"></i><span>Sort</span></div>
+<div class="icon-card"><i class="fas fa-sort-amount-up"></i><span>Ascending</span></div>
+<div class="icon-card"><i class="fas fa-sort-amount-down"></i><span>Descending</span></div>
+<div class="icon-card"><i class="fas fa-sliders-h"></i><span>Controls</span></div>
+<div class="icon-card"><i class="fas fa-th"></i><span>Grid</span></div>
+
+<!-- SECURITY ADVANCED -->
+<div class="icon-card"><i class="fas fa-key"></i><span>Key</span></div>
+<div class="icon-card"><i class="fas fa-user-shield"></i><span>Protection</span></div>
+<div class="icon-card"><i class="fas fa-fingerprint"></i><span>Biometric</span></div>
+<div class="icon-card"><i class="fas fa-eye"></i><span>View</span></div>
+<div class="icon-card"><i class="fas fa-eye-slash"></i><span>Hide</span></div>
+
+<!-- MISC -->
+<div class="icon-card"><i class="fas fa-magic"></i><span>Magic</span></div>
+<div class="icon-card"><i class="fas fa-fire"></i><span>Trending</span></div>
+<div class="icon-card"><i class="fas fa-star-half-alt"></i><span>Rating</span></div>
+<div class="icon-card"><i class="fas fa-heartbeat"></i><span>Status</span></div>
+<div class="icon-card"><i class="fas fa-leaf"></i><span>Green Tech</span></div>
+
+<div class="icon-card"><i class="fas fa-toggle-on"></i><span>Enable</span></div>
+<div class="icon-card"><i class="fas fa-toggle-off"></i><span>Disable</span></div>
+<div class="icon-card"><i class="fas fa-slash"></i><span>Blocked</span></div>
+<div class="icon-card"><i class="fas fa-check"></i><span>Approve</span></div>
+<div class="icon-card"><i class="fas fa-times"></i><span>Reject</span></div>
+
+<div class="icon-card"><i class="fas fa-redo"></i><span>Redo</span></div>
+<div class="icon-card"><i class="fas fa-undo"></i><span>Undo</span></div>
+<div class="icon-card"><i class="fas fa-sync"></i><span>Sync</span></div>
+<div class="icon-card"><i class="fas fa-spinner"></i><span>Processing</span></div>
+<div class="icon-card"><i class="fas fa-circle-notch"></i><span>Loading</span></div>
+
+<div class="icon-card"><i class="fas fa-save"></i><span>Save</span></div>
+<div class="icon-card"><i class="fas fa-trash"></i><span>Delete</span></div>
+<div class="icon-card"><i class="fas fa-trash-restore"></i><span>Restore</span></div>
+<div class="icon-card"><i class="fas fa-copy"></i><span>Duplicate</span></div>
+<div class="icon-card"><i class="fas fa-paste"></i><span>Paste</span></div>
+
+<div class="icon-card"><i class="fas fa-share"></i><span>Share</span></div>
+<div class="icon-card"><i class="fas fa-share-alt"></i><span>Share Link</span></div>
+<div class="icon-card"><i class="fas fa-external-link-alt"></i><span>Open External</span></div>
+<div class="icon-card"><i class="fas fa-link-slash"></i><span>Unlink</span></div>
+<div class="icon-card"><i class="fas fa-compress-arrows-alt"></i><span>Minimize</span></div>
+
+<div class="icon-card"><i class="fas fa-arrows-alt"></i><span>Move</span></div>
+<div class="icon-card"><i class="fas fa-crosshairs"></i><span>Focus</span></div>
+<div class="icon-card"><i class="fas fa-bullseye"></i><span>Goal</span></div>
+<div class="icon-card"><i class="fas fa-map-signs"></i><span>Guide</span></div>
+<div class="icon-card"><i class="fas fa-route"></i><span>Path</span></div>
+
+<div class="icon-card"><i class="fas fa-layer-group"></i><span>Layers</span></div>
+<div class="icon-card"><i class="fas fa-object-group"></i><span>Group</span></div>
+<div class="icon-card"><i class="fas fa-object-ungroup"></i><span>Ungroup</span></div>
+<div class="icon-card"><i class="fas fa-border-all"></i><span>Layout</span></div>
+<div class="icon-card"><i class="fas fa-columns"></i><span>Columns</span></div>
+
+<div class="icon-card"><i class="fas fa-ruler"></i><span>Measure</span></div>
+<div class="icon-card"><i class="fas fa-drafting-compass"></i><span>Blueprint</span></div>
+<div class="icon-card"><i class="fas fa-shapes"></i><span>Shapes</span></div>
+<div class="icon-card"><i class="fas fa-highlighter"></i><span>Highlight</span></div>
+<div class="icon-card"><i class="fas fa-eraser"></i><span>Erase</span></div>
+
+<div class="icon-card"><i class="fas fa-pen"></i><span>Write</span></div>
+<div class="icon-card"><i class="fas fa-pen-fancy"></i><span>Signature</span></div>
+<div class="icon-card"><i class="fas fa-pen-nib"></i><span>Ink</span></div>
+<div class="icon-card"><i class="fas fa-keyboard"></i><span>Keyboard</span></div>
+<div class="icon-card"><i class="fas fa-mouse"></i><span>Mouse</span></div>
+
+<div class="icon-card"><i class="fas fa-headphones"></i><span>Audio</span></div>
+<div class="icon-card"><i class="fas fa-headset"></i><span>Support</span></div>
+<div class="icon-card"><i class="fas fa-microphone-alt"></i><span>Record</span></div>
+<div class="icon-card"><i class="fas fa-volume-mute"></i><span>Mute</span></div>
+<div class="icon-card"><i class="fas fa-volume-down"></i><span>Low Volume</span></div>
+
+<div class="icon-card"><i class="fas fa-video-slash"></i><span>Camera Off</span></div>
+<div class="icon-card"><i class="fas fa-photo-video"></i><span>Media</span></div>
+<div class="icon-card"><i class="fas fa-film"></i><span>Movie</span></div>
+<div class="icon-card"><i class="fas fa-compact-disc"></i><span>Disc</span></div>
+<div class="icon-card"><i class="fas fa-broadcast-tower"></i><span>Broadcast</span></div>
+
+<div class="icon-card"><i class="fas fa-cloud-upload-alt"></i><span>Cloud Upload</span></div>
+<div class="icon-card"><i class="fas fa-cloud-download-alt"></i><span>Cloud Download</span></div>
+<div class="icon-card"><i class="fas fa-cloud-meatball"></i><span>Cloud Load</span></div>
+<div class="icon-card"><i class="fas fa-satellite"></i><span>Satellite</span></div>
+<div class="icon-card"><i class="fas fa-satellite-dish"></i><span>Signal Dish</span></div>
+
+<div class="icon-card"><i class="fas fa-bolt"></i><span>Quick</span></div>
+<div class="icon-card"><i class="fas fa-tachometer-alt"></i><span>Speed</span></div>
+<div class="icon-card"><i class="fas fa-gauge-high"></i><span>Performance</span></div>
+<div class="icon-card"><i class="fas fa-thermometer-half"></i><span>Heat</span></div>
+<div class="icon-card"><i class="fas fa-snowflake"></i><span>Cooling</span></div>
+
+<div class="icon-card"><i class="fas fa-recycle"></i><span>Recycle</span></div>
+<div class="icon-card"><i class="fas fa-seedling"></i><span>Eco</span></div>
+<div class="icon-card"><i class="fas fa-solar-panel"></i><span>Solar</span></div>
+<div class="icon-card"><i class="fas fa-wind"></i><span>Wind</span></div>
+<div class="icon-card"><i class="fas fa-water"></i><span>Water</span></div>
+
+<div class="icon-card"><i class="fas fa-user"></i><span>User</span></div>
+<div class="icon-card"><i class="fas fa-user-plus"></i><span>Add User</span></div>
+<div class="icon-card"><i class="fas fa-user-minus"></i><span>Remove User</span></div>
+<div class="icon-card"><i class="fas fa-user-edit"></i><span>Edit User</span></div>
+<div class="icon-card"><i class="fas fa-user-lock"></i><span>User Lock</span></div>
+
+<div class="icon-card"><i class="fas fa-user-shield"></i><span>User Security</span></div>
+<div class="icon-card"><i class="fas fa-user-clock"></i><span>User History</span></div>
+<div class="icon-card"><i class="fas fa-user-cog"></i><span>User Settings</span></div>
+<div class="icon-card"><i class="fas fa-user-tag"></i><span>User Tag</span></div>
+<div class="icon-card"><i class="fas fa-user-check"></i><span>User Verified</span></div>
+
+<div class="icon-card"><i class="fas fa-users"></i><span>Users</span></div>
+<div class="icon-card"><i class="fas fa-users-cog"></i><span>Team Settings</span></div>
+<div class="icon-card"><i class="fas fa-user-friends"></i><span>Connections</span></div>
+<div class="icon-card"><i class="fas fa-people-carry"></i><span>Collaboration</span></div>
+<div class="icon-card"><i class="fas fa-id-badge"></i><span>ID Badge</span></div>
+
+<div class="icon-card"><i class="fas fa-id-card"></i><span>ID Card</span></div>
+<div class="icon-card"><i class="fas fa-address-card"></i><span>Contact Card</span></div>
+<div class="icon-card"><i class="fas fa-fingerprint"></i><span>Fingerprint</span></div>
+<div class="icon-card"><i class="fas fa-eye"></i><span>View</span></div>
+<div class="icon-card"><i class="fas fa-eye-slash"></i><span>Hide</span></div>
+
+<div class="icon-card"><i class="fas fa-key"></i><span>Key</span></div>
+<div class="icon-card"><i class="fas fa-unlock"></i><span>Unlock</span></div>
+<div class="icon-card"><i class="fas fa-unlock-alt"></i><span>Unlock Alt</span></div>
+<div class="icon-card"><i class="fas fa-lock-open"></i><span>Open Lock</span></div>
+<div class="icon-card"><i class="fas fa-shield-virus"></i><span>Protection</span></div>
+
+<div class="icon-card"><i class="fas fa-sign-in-alt"></i><span>Login</span></div>
+<div class="icon-card"><i class="fas fa-sign-out-alt"></i><span>Logout</span></div>
+<div class="icon-card"><i class="fas fa-door-open"></i><span>Enter</span></div>
+<div class="icon-card"><i class="fas fa-door-closed"></i><span>Exit</span></div>
+<div class="icon-card"><i class="fas fa-passport"></i><span>Passport</span></div>
+
+<div class="icon-card"><i class="fas fa-user-secret"></i><span>Private</span></div>
+<div class="icon-card"><i class="fas fa-mask"></i><span>Anonymous</span></div>
+<div class="icon-card"><i class="fas fa-incognito"></i><span>Incognito</span></div>
+<div class="icon-card"><i class="fas fa-user-ninja"></i><span>Ninja Mode</span></div>
+<div class="icon-card"><i class="fas fa-user-astronaut"></i><span>Astronaut</span></div>
+
+<div class="icon-card"><i class="fas fa-smile"></i><span>Happy</span></div>
+<div class="icon-card"><i class="fas fa-frown"></i><span>Sad</span></div>
+<div class="icon-card"><i class="fas fa-meh"></i><span>Neutral</span></div>
+<div class="icon-card"><i class="fas fa-angry"></i><span>Angry</span></div>
+<div class="icon-card"><i class="fas fa-grin-stars"></i><span>Excited</span></div>
+
+<div class="icon-card"><i class="fas fa-heart"></i><span>Like</span></div>
+<div class="icon-card"><i class="fas fa-heart-broken"></i><span>Broken</span></div>
+<div class="icon-card"><i class="fas fa-thumbs-up"></i><span>Approve</span></div>
+<div class="icon-card"><i class="fas fa-thumbs-down"></i><span>Dislike</span></div>
+<div class="icon-card"><i class="fas fa-star"></i><span>Star</span></div>
+
+<div class="icon-card"><i class="fas fa-star-half-alt"></i><span>Half Star</span></div>
+<div class="icon-card"><i class="fas fa-medal"></i><span>Medal</span></div>
+<div class="icon-card"><i class="fas fa-trophy"></i><span>Trophy</span></div>
+<div class="icon-card"><i class="fas fa-crown"></i><span>Premium</span></div>
+<div class="icon-card"><i class="fas fa-gem"></i><span>Value</span></div>
+
+<div class="icon-card"><i class="fas fa-bell"></i><span>Notification</span></div>
+<div class="icon-card"><i class="fas fa-bell-slash"></i><span>Silent</span></div>
+<div class="icon-card"><i class="fas fa-comment"></i><span>Comment</span></div>
+<div class="icon-card"><i class="fas fa-comment-dots"></i><span>Discussion</span></div>
+<div class="icon-card"><i class="fas fa-comments-dollar"></i><span>Paid Chat</span></div>
+
+<div class="icon-card"><i class="fas fa-at"></i><span>Mention</span></div>
+<div class="icon-card"><i class="fas fa-hashtag"></i><span>Tag</span></div>
+<div class="icon-card"><i class="fas fa-envelope-open"></i><span>Mail Open</span></div>
+<div class="icon-card"><i class="fas fa-inbox"></i><span>Inbox</span></div>
+<div class="icon-card"><i class="fas fa-mail-bulk"></i><span>Bulk Mail</span></div>
+
+<div class="icon-card"><i class="fas fa-user-md"></i><span>Doctor</span></div>
+<div class="icon-card"><i class="fas fa-user-tie"></i><span>Manager</span></div>
+<div class="icon-card"><i class="fas fa-user-plus"></i><span>Worker</span></div>
+<div class="icon-card"><i class="fas fa-user-nurse"></i><span>Nurse</span></div>
+<div class="icon-card"><i class="fas fa-user-graduate"></i><span>Graduate</span></div>
+
+<div class="icon-card"><i class="fas fa-laptop"></i><span>Laptop</span></div>
+<div class="icon-card"><i class="fas fa-desktop"></i><span>Desktop</span></div>
+<div class="icon-card"><i class="fas fa-tablet-alt"></i><span>Tablet</span></div>
+<div class="icon-card"><i class="fas fa-mobile"></i><span>Mobile Device</span></div>
+<div class="icon-card"><i class="fas fa-mobile-alt"></i><span>Smartphone</span></div>
+
+<div class="icon-card"><i class="fas fa-tv"></i><span>Smart TV</span></div>
+<div class="icon-card"><i class="fas fa-print"></i><span>Printer</span></div>
+<div class="icon-card"><i class="fas fa-scanner"></i><span>Scanner</span></div>
+<div class="icon-card"><i class="fas fa-keyboard"></i><span>Keyboard</span></div>
+<div class="icon-card"><i class="fas fa-mouse"></i><span>Mouse</span></div>
+
+<div class="icon-card"><i class="fas fa-hdd"></i><span>Hard Disk</span></div>
+<div class="icon-card"><i class="fas fa-memory"></i><span>RAM</span></div>
+<div class="icon-card"><i class="fas fa-microchip"></i><span>Processor</span></div>
+<div class="icon-card"><i class="fas fa-sd-card"></i><span>SD Card</span></div>
+<div class="icon-card"><i class="fas fa-sim-card"></i><span>SIM Card</span></div>
+
+<div class="icon-card"><i class="fas fa-plug"></i><span>Power</span></div>
+<div class="icon-card"><i class="fas fa-battery-full"></i><span>Battery Full</span></div>
+<div class="icon-card"><i class="fas fa-battery-half"></i><span>Battery Medium</span></div>
+<div class="icon-card"><i class="fas fa-battery-quarter"></i><span>Battery Low</span></div>
+<div class="icon-card"><i class="fas fa-charging-station"></i><span>Charging</span></div>
+
+<div class="icon-card"><i class="fas fa-wifi"></i><span>WiFi</span></div>
+<div class="icon-card"><i class="fas fa-network-wired"></i><span>Network</span></div>
+<div class="icon-card"><i class="fas fa-angry"></i><span>Router</span></div>
+<div class="icon-card"><i class="fas fa-ethernet"></i><span>Ethernet</span></div>
+<div class="icon-card"><i class="fas fa-signal"></i><span>Signal</span></div>
+
+<div class="icon-card"><i class="fas fa-satellite"></i><span>Satellite</span></div>
+<div class="icon-card"><i class="fas fa-broadcast-tower"></i><span>Broadcast</span></div>
+<div class="icon-card"><i class="fas fa-rss"></i><span>RSS Feed</span></div>
+<div class="icon-card"><i class="fas fa-cloud-upload-alt"></i><span>Cloud Upload</span></div>
+<div class="icon-card"><i class="fas fa-cloud-download-alt"></i><span>Cloud Download</span></div>
+
+<div class="icon-card"><i class="fas fa-database"></i><span>Storage</span></div>
+<div class="icon-card"><i class="fas fa-server"></i><span>Server</span></div>
+<div class="icon-card"><i class="fas fa-sitemap"></i><span>Architecture</span></div>
+<div class="icon-card"><i class="fas fa-project-diagram"></i><span>System Flow</span></div>
+<div class="icon-card"><i class="fas fa-layer-group"></i><span>System Layers</span></div>
+
+<div class="icon-card"><i class="fas fa-terminal"></i><span>Terminal</span></div>
+<div class="icon-card"><i class="fas fa-code-branch"></i><span>Version Control</span></div>
+<div class="icon-card"><i class="fas fa-bug"></i><span>Bug</span></div>
+<div class="icon-card"><i class="fas fa-bug-slash"></i><span>Bug Fix</span></div>
+<div class="icon-card"><i class="fas fa-shield-alt"></i><span>Firewall</span></div>
+
+<div class="icon-card"><i class="fas fa-lock"></i><span>System Lock</span></div>
+<div class="icon-card"><i class="fas fa-unlock"></i><span>System Unlock</span></div>
+<div class="icon-card"><i class="fas fa-user-shield"></i><span>Access Control</span></div>
+<div class="icon-card"><i class="fas fa-key"></i><span>System Key</span></div>
+<div class="icon-card"><i class="fas fa-fingerprint"></i><span>Biometric</span></div>
+
+<div class="icon-card"><i class="fas fa-tools"></i><span>Maintenance</span></div>
+<div class="icon-card"><i class="fas fa-wrench"></i><span>Repair</span></div>
+<div class="icon-card"><i class="fas fa-cogs"></i><span>Configuration</span></div>
+<div class="icon-card"><i class="fas fa-sliders-h"></i><span>Controls</span></div>
+<div class="icon-card"><i class="fas fa-sync"></i><span>System Sync</span></div>
+
+<div class="icon-card"><i class="fas fa-redo"></i><span>Restart</span></div>
+<div class="icon-card"><i class="fas fa-power-off"></i><span>Shutdown</span></div>
+<div class="icon-card"><i class="fas fa-play"></i><span>Start</span></div>
+<div class="icon-card"><i class="fas fa-pause"></i><span>Pause</span></div>
+<div class="icon-card"><i class="fas fa-stop"></i><span>Stop</span></div>
+
+<div class="icon-card"><i class="fas fa-tachometer-alt"></i><span>Performance</span></div>
+<div class="icon-card"><i class="fas fa-chart-line"></i><span>System Load</span></div>
+<div class="icon-card"><i class="fas fa-thermometer-half"></i><span>Temperature</span></div>
+<div class="icon-card"><i class="fas fa-fan"></i><span>Cooling</span></div>
+<div class="icon-card"><i class="fas fa-bolt"></i><span>Power Boost</span></div>
+
+<div class="icon-card"><i class="fas fa-cube"></i><span>Module</span></div>
+<div class="icon-card"><i class="fas fa-box"></i><span>Package</span></div>
+<div class="icon-card"><i class="fas fa-box-open"></i><span>Open Package</span></div>
+<div class="icon-card"><i class="fas fa-archive"></i><span>Archive</span></div>
+<div class="icon-card"><i class="fas fa-folder"></i><span>System Folder</span></div>
+
+<div class="icon-card"><i class="fas fa-building"></i><span>Company</span></div>
+<div class="icon-card"><i class="fas fa-city"></i><span>Corporate</span></div>
+<div class="icon-card"><i class="fas fa-briefcase"></i><span>Business</span></div>
+<div class="icon-card"><i class="fas fa-handshake"></i><span>Partnership</span></div>
+<div class="icon-card"><i class="fas fa-chart-pie"></i><span>Business Analytics</span></div>
+
+<div class="icon-card"><i class="fas fa-chart-bar"></i><span>Statistics</span></div>
+<div class="icon-card"><i class="fas fa-chart-area"></i><span>Growth Chart</span></div>
+<div class="icon-card"><i class="fas fa-chart-line"></i><span>Market Trend</span></div>
+<div class="icon-card"><i class="fas fa-coins"></i><span>Revenue</span></div>
+<div class="icon-card"><i class="fas fa-dollar-sign"></i><span>Money</span></div>
+
+<div class="icon-card"><i class="fas fa-rupee-sign"></i><span>Rupee</span></div>
+<div class="icon-card"><i class="fas fa-euro-sign"></i><span>Euro</span></div>
+<div class="icon-card"><i class="fas fa-pound-sign"></i><span>Pound</span></div>
+<div class="icon-card"><i class="fas fa-yen-sign"></i><span>Yen</span></div>
+<div class="icon-card"><i class="fas fa-wallet"></i><span>Wallet</span></div>
+
+<div class="icon-card"><i class="fas fa-credit-card"></i><span>Credit Card</span></div>
+<div class="icon-card"><i class="fas fa-receipt"></i><span>Invoice</span></div>
+<div class="icon-card"><i class="fas fa-file-invoice"></i><span>Billing</span></div>
+<div class="icon-card"><i class="fas fa-cash-register"></i><span>Checkout</span></div>
+<div class="icon-card"><i class="fas fa-piggy-bank"></i><span>Savings</span></div>
+
+<div class="icon-card"><i class="fas fa-store"></i><span>Store</span></div>
+<div class="icon-card"><i class="fas fa-store-alt"></i><span>Shop</span></div>
+<div class="icon-card"><i class="fas fa-shopping-cart"></i><span>Cart</span></div>
+<div class="icon-card"><i class="fas fa-shopping-bag"></i><span>Shopping</span></div>
+<div class="icon-card"><i class="fas fa-boxes"></i><span>Inventory</span></div>
+
+<div class="icon-card"><i class="fas fa-tags"></i><span>Pricing</span></div>
+<div class="icon-card"><i class="fas fa-percent"></i><span>Discount</span></div>
+<div class="icon-card"><i class="fas fa-bullhorn"></i><span>Marketing</span></div>
+<div class="icon-card"><i class="fas fa-ad"></i><span>Advertisement</span></div>
+<div class="icon-card"><i class="fas fa-funnel-dollar"></i><span>Sales Funnel</span></div>
+
+<div class="icon-card"><i class="fas fa-chart-network"></i><span>Marketing Strategy</span></div>
+<div class="icon-card"><i class="fas fa-users"></i><span>Audience</span></div>
+<div class="icon-card"><i class="fas fa-user-tag"></i><span>Target User</span></div>
+<div class="icon-card"><i class="fas fa-thumbs-up"></i><span>Engagement</span></div>
+<div class="icon-card"><i class="fas fa-share-alt"></i><span>Share</span></div>
+
+<div class="icon-card"><i class="fas fa-broadcast-tower"></i><span>Broadcast</span></div>
+<div class="icon-card"><i class="fas fa-podcast"></i><span>Podcast</span></div>
+<div class="icon-card"><i class="fas fa-video"></i><span>Video</span></div>
+<div class="icon-card"><i class="fas fa-photo-video"></i><span>Media</span></div>
+<div class="icon-card"><i class="fas fa-camera"></i><span>Camera</span></div>
+
+<div class="icon-card"><i class="fas fa-image"></i><span>Image</span></div>
+<div class="icon-card"><i class="fas fa-play-circle"></i><span>Play Media</span></div>
+<div class="icon-card"><i class="fas fa-music"></i><span>Music</span></div>
+<div class="icon-card"><i class="fas fa-headphones"></i><span>Audio</span></div>
+<div class="icon-card"><i class="fas fa-microphone"></i><span>Mic</span></div>
+
+<div class="icon-card"><i class="fas fa-newspaper"></i><span>News</span></div>
+<div class="icon-card"><i class="fas fa-blog"></i><span>Blog</span></div>
+<div class="icon-card"><i class="fas fa-pen-nib"></i><span>Content Writing</span></div>
+<div class="icon-card"><i class="fas fa-edit"></i><span>Edit</span></div>
+<div class="icon-card"><i class="fas fa-copy"></i><span>Duplicate</span></div>
+
+<div class="icon-card"><i class="fas fa-file-word"></i><span>Word File</span></div>
+<div class="icon-card"><i class="fas fa-file-pdf"></i><span>PDF</span></div>
+<div class="icon-card"><i class="fas fa-file-powerpoint"></i><span>PPT</span></div>
+<div class="icon-card"><i class="fas fa-file-archive"></i><span>Zip File</span></div>
+<div class="icon-card"><i class="fas fa-print"></i><span>Print</span></div>
+
+<div class="icon-card"><i class="fas fa-calendar"></i><span>Calendar</span></div>
+<div class="icon-card"><i class="fas fa-calendar-check"></i><span>Meeting</span></div>
+<div class="icon-card"><i class="fas fa-clock"></i><span>Time</span></div>
+<div class="icon-card"><i class="fas fa-hourglass-half"></i><span>Deadline</span></div>
+<div class="icon-card"><i class="fas fa-bell"></i><span>Reminder</span></div>
+
+<div class="icon-card"><i class="fas fa-clipboard"></i><span>Office Notes</span></div>
+<div class="icon-card"><i class="fas fa-sticky-note"></i><span>Quick Note</span></div>
+<div class="icon-card"><i class="fas fa-stopwatch"></i><span>Office Call</span></div>
+<div class="icon-card"><i class="fas fa-envelope-open-text"></i><span>Mail Marketing</span></div>
+<div class="icon-card"><i class="fas fa-paper-plane"></i><span>Campaign</span></div>
+
+<!-- HEALTH & WELLNESS -->
+<div class="icon-card"><i class="fas fa-heartbeat"></i><span>Health</span></div>
+<div class="icon-card"><i class="fas fa-hospital"></i><span>Hospital</span></div>
+<div class="icon-card"><i class="fas fa-clinic-medical"></i><span>Clinic</span></div>
+<div class="icon-card"><i class="fas fa-user-md"></i><span>Doctor</span></div>
+<div class="icon-card"><i class="fas fa-stethoscope"></i><span>Checkup</span></div>
+<div class="icon-card"><i class="fas fa-ambulance"></i><span>Emergency</span></div>
+<div class="icon-card"><i class="fas fa-pills"></i><span>Medicine</span></div>
+<div class="icon-card"><i class="fas fa-syringe"></i><span>Injection</span></div>
+<div class="icon-card"><i class="fas fa-dna"></i><span>DNA</span></div>
+<div class="icon-card"><i class="fas fa-notes-medical"></i><span>Medical Report</span></div>
+
+<!-- TRAVEL & TRANSPORT -->
+<div class="icon-card"><i class="fas fa-plane"></i><span>Flight</span></div>
+<div class="icon-card"><i class="fas fa-plane-departure"></i><span>Departure</span></div>
+<div class="icon-card"><i class="fas fa-plane-arrival"></i><span>Arrival</span></div>
+<div class="icon-card"><i class="fas fa-train"></i><span>Train</span></div>
+<div class="icon-card"><i class="fas fa-bus"></i><span>Bus</span></div>
+<div class="icon-card"><i class="fas fa-car"></i><span>Car</span></div>
+<div class="icon-card"><i class="fas fa-taxi"></i><span>Taxi</span></div>
+<div class="icon-card"><i class="fas fa-motorcycle"></i><span>Bike</span></div>
+<div class="icon-card"><i class="fas fa-ship"></i><span>Ship</span></div>
+<div class="icon-card"><i class="fas fa-route"></i><span>Route</span></div>
+
+<div class="icon-card"><i class="fas fa-map"></i><span>Map</span></div>
+<div class="icon-card"><i class="fas fa-map-signs"></i><span>Directions</span></div>
+<div class="icon-card"><i class="fas fa-suitcase"></i><span>Luggage</span></div>
+<div class="icon-card"><i class="fas fa-suitcase-rolling"></i><span>Travel Bag</span></div>
+<div class="icon-card"><i class="fas fa-hotel"></i><span>Hotel</span></div>
+<div class="icon-card"><i class="fas fa-passport"></i><span>Passport</span></div>
+
+<!-- EDUCATION & EXAM -->
+<div class="icon-card"><i class="fas fa-school"></i><span>School</span></div>
+<div class="icon-card"><i class="fas fa-university"></i><span>University</span></div>
+<div class="icon-card"><i class="fas fa-chalkboard"></i><span>Classroom</span></div>
+<div class="icon-card"><i class="fas fa-pen"></i><span>Writing</span></div>
+<div class="icon-card"><i class="fas fa-pencil-alt"></i><span>Pencil</span></div>
+<div class="icon-card"><i class="fas fa-highlighter"></i><span>Highlight</span></div>
+<div class="icon-card"><i class="fas fa-book"></i><span>Book</span></div>
+<div class="icon-card"><i class="fas fa-atlas"></i><span>Atlas</span></div>
+<div class="icon-card"><i class="fas fa-graduation-cap"></i><span>Degree</span></div>
+<div class="icon-card"><i class="fas fa-award"></i><span>Achievement</span></div>
+
+<!-- INDUSTRY & ENGINEERING -->
+<div class="icon-card"><i class="fas fa-industry"></i><span>Industry</span></div>
+<div class="icon-card"><i class="fas fa-factory"></i><span>Factory</span></div>
+<div class="icon-card"><i class="fas fa-hard-hat"></i><span>Safety</span></div>
+<div class="icon-card"><i class="fas fa-drafting-compass"></i><span>Design</span></div>
+<div class="icon-card"><i class="fas fa-ruler-combined"></i><span>Measurement</span></div>
+<div class="icon-card"><i class="fas fa-hammer"></i><span>Construction</span></div>
+<div class="icon-card"><i class="fas fa-screwdriver"></i><span>Repair Tool</span></div>
+<div class="icon-card"><i class="fas fa-truck"></i><span>Logistics</span></div>
+<div class="icon-card"><i class="fas fa-warehouse"></i><span>Warehouse</span></div>
+<div class="icon-card"><i class="fas fa-oil-can"></i><span>Maintenance</span></div>
+
+<!-- LIFESTYLE & DAILY USE -->
+<div class="icon-card"><i class="fas fa-home"></i><span>Home</span></div>
+<div class="icon-card"><i class="fas fa-couch"></i><span>Living Room</span></div>
+<div class="icon-card"><i class="fas fa-bed"></i><span>Bedroom</span></div>
+<div class="icon-card"><i class="fas fa-utensils"></i><span>Food</span></div>
+<div class="icon-card"><i class="fas fa-coffee"></i><span>Coffee</span></div>
+<div class="icon-card"><i class="fas fa-glass-martini"></i><span>Drink</span></div>
+<div class="icon-card"><i class="fas fa-shopping-basket"></i><span>Groceries</span></div>
+<div class="icon-card"><i class="fas fa-tshirt"></i><span>Clothing</span></div>
+<div class="icon-card"><i class="fas fa-shoe-prints"></i><span>Footwear</span></div>
+<div class="icon-card"><i class="fas fa-spa"></i><span>Relax</span></div>
+
+<!-- WEATHER & NATURE -->
+<div class="icon-card"><i class="fas fa-sun"></i><span>Sunny</span></div>
+<div class="icon-card"><i class="fas fa-cloud-sun"></i><span>Cloudy</span></div>
+<div class="icon-card"><i class="fas fa-cloud-rain"></i><span>Rain</span></div>
+<div class="icon-card"><i class="fas fa-snowflake"></i><span>Snow</span></div>
+<div class="icon-card"><i class="fas fa-wind"></i><span>Wind</span></div>
+<div class="icon-card"><i class="fas fa-tree"></i><span>Tree</span></div>
+<div class="icon-card"><i class="fas fa-leaf"></i><span>Green</span></div>
+<div class="icon-card"><i class="fas fa-mountain"></i><span>Mountain</span></div>
+<div class="icon-card"><i class="fas fa-water"></i><span>Water</span></div>
+<div class="icon-card"><i class="fas fa-fire"></i><span>Fire</span></div>
+
+<!-- MISC & SPECIAL -->
+<div class="icon-card"><i class="fas fa-magic"></i><span>Magic</span></div>
+<div class="icon-card"><i class="fas fa-infinity"></i><span>Unlimited</span></div>
+<div class="icon-card"><i class="fas fa-random"></i><span>Shuffle</span></div>
+<div class="icon-card"><i class="fas fa-bullseye"></i><span>Target</span></div>
+<div class="icon-card"><i class="fas fa-crosshairs"></i><span>Focus</span></div>
+<div class="icon-card"><i class="fas fa-flag-checkered"></i><span>Finish</span></div>
+<div class="icon-card"><i class="fas fa-compass"></i><span>Explore</span></div>
+<div class="icon-card"><i class="fas fa-globe-asia"></i><span>World</span></div>
+<div class="icon-card"><i class="fas fa-rocket"></i><span>Future</span></div>
+<div class="icon-card"><i class="fas fa-lightbulb"></i><span>Innovation</span></div>
+
+<!-- ===== EDUCATION ADVANCED ===== -->
+<div class="icon-card"><i class="fas fa-school"></i><span>School</span></div>
+<div class="icon-card"><i class="fas fa-university"></i><span>University</span></div>
+<div class="icon-card"><i class="fas fa-book-dead"></i><span>Archive</span></div>
+<div class="icon-card"><i class="fas fa-spell-check"></i><span>Grammar</span></div>
+<div class="icon-card"><i class="fas fa-clipboard"></i><span>Notes</span></div>
+
+<!-- ===== OFFICE & WORKFLOW ===== -->
+<div class="icon-card"><i class="fas fa-chair"></i><span>Office</span></div>
+<div class="icon-card"><i class="fas fa-briefcase-medical"></i><span>Work Mode</span></div>
+<div class="icon-card"><i class="fas fa-sticky-note"></i><span>Reminder</span></div>
+<div class="icon-card"><i class="fas fa-stream"></i><span>Pipeline</span></div>
+<div class="icon-card"><i class="fas fa-clipboard-check"></i><span>Approval</span></div>
+
+<!-- ===== DATA SCIENCE ===== -->
+<div class="icon-card"><i class="fas fa-wave-square"></i><span>Signal Data</span></div>
+<div class="icon-card"><i class="fas fa-project-diagram"></i><span>Data Model</span></div>
+<div class="icon-card"><i class="fas fa-random"></i><span>Randomization</span></div>
+<div class="icon-card"><i class="fas fa-square-root-alt"></i><span>Statistics</span></div>
+<div class="icon-card"><i class="fas fa-percentage"></i><span>Probability</span></div>
+
+<!-- ===== AI / ML ===== -->
+<div class="icon-card"><i class="fas fa-robot"></i><span>AI Bot</span></div>
+<div class="icon-card"><i class="fas fa-brain"></i><span>Neural Net</span></div>
+<div class="icon-card"><i class="fas fa-microchip"></i><span>Inference</span></div>
+<div class="icon-card"><i class="fas fa-code"></i><span>Model Code</span></div>
+<div class="icon-card"><i class="fas fa-cubes"></i><span>Training Data</span></div>
+
+<!-- ===== FINTECH ===== -->
+<div class="icon-card"><i class="fas fa-piggy-bank"></i><span>Savings</span></div>
+<div class="icon-card"><i class="fas fa-donate"></i><span>Donation</span></div>
+<div class="icon-card"><i class="fas fa-file-invoice-dollar"></i><span>Billing</span></div>
+<div class="icon-card"><i class="fas fa-money-bill-wave"></i><span>Cash Flow</span></div>
+<div class="icon-card"><i class="fas fa-landmark"></i><span>Bank</span></div>
+
+<!-- ===== HR & RECRUITMENT ===== -->
+<div class="icon-card"><i class="fas fa-user-tie"></i><span>HR</span></div>
+<div class="icon-card"><i class="fas fa-user-search"></i><span>Hiring</span></div>
+<div class="icon-card"><i class="fas fa-file-contract"></i><span>Offer Letter</span></div>
+<div class="icon-card"><i class="fas fa-users"></i><span>Workforce</span></div>
+<div class="icon-card"><i class="fas fa-calendar-check"></i><span>Interview</span></div>
+
+<!-- ===== CLOUD & DEVOPS ===== -->
+<div class="icon-card"><i class="fas fa-cloud"></i><span>Cloud Core</span></div>
+<div class="icon-card"><i class="fas fa-cloud-rain"></i><span>Load</span></div>
+<div class="icon-card"><i class="fas fa-server"></i><span>Instance</span></div>
+<div class="icon-card"><i class="fas fa-network-wired"></i><span>VPC</span></div>
+<div class="icon-card"><i class="fas fa-shield-alt"></i><span>Cloud Security</span></div>
+
+<!-- ===== QA & TESTING ===== -->
+<div class="icon-card"><i class="fas fa-vial"></i><span>Testing</span></div>
+<div class="icon-card"><i class="fas fa-check-circle"></i><span>Passed</span></div>
+<div class="icon-card"><i class="fas fa-times-circle"></i><span>Failed</span></div>
+<div class="icon-card"><i class="fas fa-bug"></i><span>Issue</span></div>
+<div class="icon-card"><i class="fas fa-tools"></i><span>Fix</span></div>
+
+<!-- ===== CONTENT CREATOR ===== -->
+<div class="icon-card"><i class="fas fa-bullhorn"></i><span>Announcement</span></div>
+<div class="icon-card"><i class="fas fa-pen"></i><span>Draft</span></div>
+<div class="icon-card"><i class="fas fa-hashtag"></i><span>SEO</span></div>
+<div class="icon-card"><i class="fas fa-chart-line"></i><span>Reach</span></div>
+<div class="icon-card"><i class="fas fa-eye"></i><span>Views</span></div>
+
+<!-- ===== STARTUP & INNOVATION ===== -->
+<div class="icon-card"><i class="fas fa-lightbulb"></i><span>Startup Idea</span></div>
+<div class="icon-card"><i class="fas fa-seedling"></i><span>Early Stage</span></div>
+<div class="icon-card"><i class="fas fa-chart-growth"></i><span>Scaling</span></div>
+<div class="icon-card"><i class="fas fa-rocket"></i><span>Pitch</span></div>
+<div class="icon-card"><i class="fas fa-handshake"></i><span>Investor</span></div>
+
+<!-- ===== SYSTEM / OS ===== -->
+<div class="icon-card"><i class="fas fa-microchip"></i><span>CPU</span></div>
+<div class="icon-card"><i class="fas fa-memory"></i><span>Memory</span></div>
+<div class="icon-card"><i class="fas fa-fan"></i><span>Cooling Fan</span></div>
+<div class="icon-card"><i class="fas fa-power-off"></i><span>Shutdown</span></div>
+<div class="icon-card"><i class="fas fa-redo-alt"></i><span>Restart</span></div>
+
+<!-- ===== TRANSPORT & LOGISTICS ===== -->
+<div class="icon-card"><i class="fas fa-warehouse"></i><span>Warehouse</span></div>
+<div class="icon-card"><i class="fas fa-dolly"></i><span>Handling</span></div>
+<div class="icon-card"><i class="fas fa-shipping-fast"></i><span>Fast Shipping</span></div>
+<div class="icon-card"><i class="fas fa-box-open"></i><span>Unboxing</span></div>
+<div class="icon-card"><i class="fas fa-barcode"></i><span>Barcode</span></div>
+
+<!-- ===== SMART LIFE ===== -->
+<div class="icon-card"><i class="fas fa-home"></i><span>Smart Home</span></div>
+<div class="icon-card"><i class="fas fa-lightbulb"></i><span>Smart Light</span></div>
+<div class="icon-card"><i class="fas fa-lock"></i><span>Smart Lock</span></div>
+<div class="icon-card"><i class="fas fa-camera-security"></i><span>Surveillance</span></div>
+<div class="icon-card"><i class="fas fa-temperature-high"></i><span>Thermostat</span></div>
+
+</section>
+
+<footer>
+  © Icon Library | Dark UI | Reusable for Any Website
+</footer>
+
+<script>
+/* === JS HOVER PARALLAX EFFECT === */
+document.querySelectorAll('.icon-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const rect=card.getBoundingClientRect();
+    const x=e.clientX-rect.left;
+    const y=e.clientY-rect.top;
+    const cx=rect.width/2;
+    const cy=rect.height/2;
+
+    card.style.transform=
+      `rotateX(${-(y-cy)/18}deg) rotateY(${(x-cx)/18}deg) scale(1.05)`;
+  });
+
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='rotateX(0) rotateY(0) scale(1)';
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
