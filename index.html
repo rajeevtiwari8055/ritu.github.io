@@ -10,21 +10,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-:root{
-  --purple:#b388ff;
-  --purple-dark:#7c4dff;
-  --glass:rgba(255,255,255,0.22);
-}
+:root{--purple:#b388ff;--purple-dark:#7c4dff;--glass:rgba(255,255,255,0.22);}
 
 /* GENERAL */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
 body{background:linear-gradient(135deg,#f4ecff,#e9ddff);color:#333;overflow-x:hidden;}
 
 /* NAVBAR */
-nav{
-  position:fixed;top:0;width:100%;padding:14px 50px;display:flex;justify-content:space-between;align-items:center;
-  background:#b388ff(255,255,255,0.85);backdrop-filter:blur(14px);z-index:1000;box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
+nav{position:fixed;top:0;width:100%;padding:14px 50px;display:flex;justify-content:space-between;align-items:center;
+  background:#b388ff(255,255,255,0.85);backdrop-filter:blur(14px);z-index:1000;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
 nav h2{color:var(--purple-dark);}
 nav ul{display:flex;list-style:none;gap:20px;}
 nav ul li a{text-decoration:none;color:#222222;font-size:14px;position:relative;transition:.3s;}
@@ -35,12 +29,11 @@ nav ul li a:hover::after{width:100%;}
 nav ul li a:hover {color:#262626;}
 
 /* HERO */
-#home{
-  height:100vh;
+#home{height:100vh;
   background: linear-gradient(to right,rgba(88,40,200,.6),rgba(179,136,255,.6)),
   url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e") center/cover no-repeat;
-  display:flex;align-items:center;padding:90px;color:white;position:relative;
-}
+  display:flex;align-items:center;padding:90px;color:white;position:relative;}
+
 .hero-content{animation:slideIn 1.5s ease;}
 .hero-content h1{font-size:52px;margin-bottom:15px;line-height:1.2;letter-spacing:1px;}
 .hero-content p{margin:20px 0;font-size:18px;}
@@ -88,338 +81,106 @@ section h2::after{content:"";width:80px;height:3px;background:var(--purple);disp
 .social a{text-decoration: none !important;}
 
 /* Date-Time-Status display */
-.rt-date-time {
-  position: absolute;
-  top: 95px;
-  right: 20px;
-  text-align: right;
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  color:inherit;
-  z-index: 10;
-  background: transparent;
-}
-
-.rt-date-time #current-date {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.rt-date-time #current-time {
-  font-size: 14px;
-  margin-top: 2px;
-  font-weight: 300;
-}
+.rt-date-time {position: absolute;top: 95px;right: 20px;text-align: right;font-family: "Poppins", "Segoe UI", Arial, sans-serif;color:inherit;z-index: 10;background: transparent;}
+.rt-date-time #current-date {font-size: 14px;font-weight: 300;}
+.rt-date-time #current-time {font-size: 14px;margin-top: 2px;font-weight: 300;}
 
 /* FOOTER 
-footer{
-  padding:20px;
-  text-align:center;
-  background:#b388ff;
-  position:relative;
-}
+footer{padding:20px;text-align:center;background:#b388ff;position:relative;}
+footer .foot-links{margin-bottom:10px;}
+footer .foot-links a{margin:0 10px;position:relative;color:#333;text-decoration:none;transition:0.3s;}
+footer .foot-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#fff;transition:0.4s;}
+footer .foot-links a:hover{color:#fff;}
+footer .foot-links a:hover::after{width:100%;} */
 
-footer .foot-links{
-  margin-bottom:10px;
-}
-
-footer .foot-links a{
-  margin:0 10px;
-  position:relative;
-  color:#333;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-footer .foot-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-5px;
-  width:0;
-  height:2px;
-  background:#fff;
-  transition:0.4s;
-}
-
-footer .foot-links a:hover{
-  color:#fff;
-}
-
-footer .foot-links a:hover::after{
-  width:100%;
-} */
-
-.site-footer{
-  background:#0b1220;   /* dark blue (same family) */
-  padding:40px 80px 30px; /* LEFT–RIGHT space add */
-  color:#fff;
-}
+/* FOOTER */
+.site-footer{background:#0b1220;padding:40px 80px 30px;color:#fff;}
 
 /* QUICK LINKS TITLE */
-.footer-links strong{
-  color:#fff;
-  display:block;
-  margin-bottom:14px;
-  font-size:16px;
-}
+.footer-links strong{color:#fff;display:block;margin-bottom:14px;font-size:16px;}
 
 /* QUICK LINKS LIST */
-.footer-links a{
-  display:block;              /* ek ke niche ek */
-  width:max-content;
-  margin:6px 0;
-  color:#b388ff;              /* violet by default */
-  text-decoration:none;       /* no underline */
-  position:relative;
-  transition:0.3s;
-}
+.footer-links a{display:block;width:max-content;margin:6px 0;color:#b388ff;text-decoration:none;position:relative;transition:0.3s;}
 
 /* DYNAMIC UNDERLINE (HIDDEN BY DEFAULT) */
 .footer-links a::after,
-.dev-link::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0;
-  height:2px;
-  background:#fff;
-  transition:0.4s;
-}
+.dev-link::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#fff;transition:0.4s;}
 
 /* HOVER EFFECT */
-.footer-links a:hover{
-  color:#fff;
-}
-
+.footer-links a:hover{color:#fff;}
 .footer-links a:hover::after,
-.dev-link:hover::after{
-  width:100%;
-}
+.dev-link:hover::after{width:100%;}
 
 /* POLICY LINKS GAP */
-.policy-links{
-  margin-top:14px;
-}
+.policy-links{margin-top:14px;}
 
 /* PURPLE THIN DIVIDER */
-.footer-divider{
-  height:1px;
-  background:#b388ff;
-  margin:22px 0;
-}
+.footer-divider{height:1px;background:#b388ff;margin:22px 0;}
 
 /* BOTTOM ALIGNMENT */
-.footer-bottom{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
 
 /* DEV LINK */
-.dev-link{
-  color:#b388ff;
-  text-decoration:none;
-  position:relative;
-}
+.dev-link{color:#b388ff;text-decoration:none;position:relative;}
 
 /* HOVER COLOR FOR DEV LINK */
-.dev-link:hover{
-  color:#fff;
-}
+.dev-link:hover{color:#fff;}
 
 /* HERO ANIMATION */
 @keyframes slideIn{from{transform:translateX(-80px);opacity:0;}to{transform:translateX(0);opacity:1;}}
 
 /* RESPONSIVE */
-@media(max-width:900px){
-  #about{flex-direction:column;}
-  #about img{width:100%;}
-  .hero-content h1{font-size:40px;}
-  nav ul{display:none;}
-}
+@media(max-width:900px){#about{flex-direction:column;}#about img{width:100%;}.hero-content h1{font-size:40px;}nav ul{display:none;}}
 
 /* Hamburger Icon */
-.hamburger {
-  display: none;
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
-}
+.hamburger {display: none;font-size: 24px;color: #fff;cursor: pointer;}
 
 /* Mobile Menu */
 @media(max-width:900px){
-  nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    background: rgba(179,136,255,0.95);
-    position: absolute;
-    top: 70px; /* navbar height */
-    right: 0;
-    width: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  nav ul li {
-    margin: 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-  nav ul li a {
-    padding: 12px 20px;
-    display: block;
-    color: #fff;
-  }
-  .hamburger {
-    display: block;
-  }
-  nav ul.show {
-    display: flex;
-  }
-}
+  nav ul {display:none;flex-direction:column;gap:0;background:rgba(179,136,255,0.95);position:absolute;top:70px;right:0;width:200px;border-radius:10px;overflow:hidden;}
+  nav ul li {margin: 0;border-bottom: 1px solid rgba(255,255,255,0.2);}
+  nav ul li a {padding: 12px 20px;display: block;color: #fff;}
+  .hamburger {display: block;}
+  nav ul.show {display: flex;}}
 
 /* Marquee Running Skills Icons */
-
-  .skills-marquee {
-    display: flex;
-    align-items: center;
-    height: 55px;   
-    overflow: hidden;
-  }
-
-  .skills-marquee img {
-    width: 40px;              /* balanced small icon size */
-    height: auto;             /* keeps SVG proportion correct */
-    margin: 0 18px;           /* extra space between icons */
-    vertical-align: middle;
-    transition: transform 0.25s ease, filter 0.25s ease;
-    filter: brightness(0.95);
-  }
-
-  .skills-marquee img:hover {
-    transform: scale(1.2);
-    filter: brightness(1.1);
-  }
+  .skills-marquee {display:flex;align-items:center;height:55px;overflow:hidden;}
+  .skills-marquee img {width:40px;height:auto;margin:0 18px;vertical-align:middle;transition:transform 0.25s ease, filter 0.25s ease;filter:brightness(0.95);}
+  .skills-marquee img:hover {transform:scale(1.2);filter:brightness(1.1);}
 
 /* ===== GRID / CHECKBOX BACKGROUND (SIDE ONLY) ===== */
-.section-bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 45%;            /* half size on page */
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(179,136,255,0.18) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(179,136,255,0.18) 1px,
-      transparent 1px
-    );
-  background-size: 38px 38px;
-  z-index: 0;
-  pointer-events: none;
-}
+.section-bg {position:absolute;top:0;bottom:0;width:45%;background-image:linear-gradient(to right,rgba(179,136,255,0.18) 1px,transparent 1px),linear-gradient(to bottom,rgba(179,136,255,0.18) 1px,transparent 1px);background-size:38px 38px;z-index:0;pointer-events:none;}
 
 /* RIGHT SIDE */
-.section-bg.right {
-  right: 0;
-}
+.section-bg.right {right: 0;}
 
 /* LEFT SIDE */
-.section-bg.left {
-  left: 0;
-}
+.section-bg.left {left: 0;}
 
 /* Content always upar */
-section > *:not(.section-bg) {
-  position: relative;
-  z-index: 1;
-}
+section > *:not(.section-bg) {position: relative;z-index: 1;}
 
 /* Section base */
-section {
-  position: relative;
-  overflow: hidden;
-}
+section {position:relative;overflow:hidden;}
 
 /* Mobile pe hide 
-@media(max-width:900px){
-  .section-bg{
-    display:none;
-  }
-} */
+@media(max-width:900px){.section-bg{display:none;}} */
 
 /* svg icons */
-.small-icon img {
-  width: 30px;   
-  height: 30px;  
-  vertical-align: middle;
-}
+.small-icon img {width: 30px;height: 30px;vertical-align: middle;}
+.typing-text{font-family:'Fira Code', monospace;font-size:24px;font-weight:500;color:#b388ff;}
+.cursor{display:inline-block;width:2px;height:1.2em;background:#b388ff;margin-left:5px;animation:blink 1s infinite;}
+@keyframes blink{0%,50%,100%{opacity:1;}25%,75%{opacity:0;}}
 
-.typing-text{
-  font-family:'Fira Code', monospace;
-  font-size:24px;
-  font-weight:500;
-  color:#b388ff;
-}
+.typing-skill{font-family:'Poppins', sans-serif;font-size:18px;font-weight:400;color:#fff;letter-spacing:1px;}
+.dynamic-text {border-right:2px solid #b388ff;;padding-right:5px;white-space:nowrap;overflow:hidden;display:inline-block;vertical-align:bottom;font-weight:600px;color:#b388ff;;}
 
-.cursor{
-  display:inline-block;
-  width:2px;
-  height:1.2em;
-  background:#b388ff;
-  margin-left:5px;
-  animation:blink 1s infinite;
-}
-
-@keyframes blink{
-  0%,50%,100%{opacity:1;}
-  25%,75%{opacity:0;}
-}
-
-.typing-skill{
-  font-family:'Poppins', sans-serif;
-  font-size:18px;
-  font-weight:400;
-  color:#fff;
-  letter-spacing:1px;
-}
-
-.dynamic-text {
-  border-right: 2px solid #b388ff;; /* blinking cursor */
-  padding-right: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: bottom;
-  font-weight: 600px;
-  color: #b388ff;; /* cursor & text color */
-}
-
-.floating-dots span{
-  position:fixed;
-  width:6px;
-  height:6px;
-  background:#b388ff;
-  border-radius:50%;
-  animation:float 10s linear infinite;
-  opacity:.6;
-}
-
+.floating-dots span{position:fixed;width:6px;height:6px;background:#b388ff;border-radius:50%;animation:float 10s linear infinite;opacity:.6;}
 .floating-dots span:nth-child(1){left:10%;animation-delay:0s;}
 .floating-dots span:nth-child(2){left:30%;animation-delay:2s;}
 .floating-dots span:nth-child(3){left:60%;animation-delay:4s;}
 .floating-dots span:nth-child(4){left:80%;animation-delay:6s;}
-
-@keyframes float{
-  0%{bottom:-10px}
-  100%{bottom:110%}
-}
+@keyframes float{0%{bottom:-10px}100%{bottom:110%}}
 </style>
 </head>
 
@@ -541,6 +302,8 @@ section {
   <img src="images/Google Analytics.svg" alt="Google Analytics">
   <img src="images/Google Sheets.svg" alt="Sheets">
   <img src="images/Microsoft365.svg" alt="Microsoft365">
+  <img src="images/Azure.svg" alt="Azure">
+  <img src="images/OpenAI.svg" alt="OpenAI">
   <img src="images/GeminiStar.svg" alt="GeminiStar">
   <img src="images/Perplexity.svg" alt="Perplexity">
   <img src="images/VS code.svg" alt="VSCode">
@@ -640,19 +403,19 @@ section {
 
 <div class="card"><img src="https://www.testim.io/wp-content/uploads/2024/02/power_of_ai_blog.jpg"><h3>AI Agents</h3>
 <p style="font-size:14px">Below are the sample Data Analytics projects on AI, Excel, Power Query, MIS, Access, SQL, Power BI, Tableau, Python & Web Development.</p>
-<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/OpenAI.svg" alt="Power BI"></span></div>
+<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Docker.svg" alt="Power BI"></span></div>
 
 <div class="card"><img src="https://img.freepik.com/free-vector/ai-technology-microchip-background-vector-digital-transformation-concept_53876-112222.jpg?semt=ais_hybrid&w=740&q=80"><h3>Artificial Intelligence</h3>
 <p style="font-size:14px">Below are the sample Data Analytics projects on AI, Excel, Power Query, MIS, Access, SQL, Power BI, Tableau, Python & Web Development.</p>
-<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Perplexity.svg" alt="Power BI"></span></div>
+<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/OpenAI.svg" alt="OpenAI"></span></div>
 
 <div class="card"><img src="https://statics.cdn.200lab.io/2024/10/machine-learning-la-gi.jpeg"><h3>Machine Learning</h3>
 <p style="font-size:14px">Below are the sample Data Analytics projects on AI, Excel, Power Query, MIS, Access, SQL, Power BI, Tableau, Python & Web Development.</p>
-<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/MIS.svg" alt="Power BI"></span></div>
+<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Perplexity.svg" alt="Machine Learning"></span></div>
 
 <div class="card"><img src="https://www.codelattice.com/blog/wp-content/uploads/2026/01/Microsoft_Azure_Cloud_01.png"><h3>Microsoft Azure</h3>
 <p style="font-size:14px">Below are the sample Data Analytics projects on AI, Excel, Power Query, MIS, Access, SQL, Power BI, Tableau, Python & Web Development.</p>
-<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Power Query.svg" alt="Power BI"></span></div>
+<a href="https://github.com/rajeevtiwari8055" target="_blank"><button class="btn">View Repository↗</button></a>  <span class="small-icon"> <img src="images/Power Query.svg" alt="Azure"></span></div>
 </div>
 </section>
 
@@ -662,14 +425,14 @@ section {
 <h2 style="color:#b388ff">Certification <i class="fas fa-award"></i></h2>
 <p style="text-align:center;">Here are some of my professional Certification showcasing my skills and expertise. Education is the most powerful weapon in the world.</p><br>
 <div class="cards">
-<div class="card"><img src="https://miro.medium.com/1*WnRXab-sreS-KePoZMYqKQ.jpeg"><h3>IIT Guwahati</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Google.svg" alt="Power BI"></span></div>
-<div class="card"><img src="https://media.licdn.com/dms/image/v2/D4D12AQFXbkwFv_t1VA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698724527451?e=2147483647&v=beta&t=8dB8YVlvzI5o4rs5_xDoqwCgJ8twJa-_E55TxxzQaZc"><h3>IIT Kharagpur</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Microsoft.svg" alt="Power BI"></span></div>
-<div class="card"><img src="https://www.simplilearn.com/ice9/skillupcertificates/Introduction-to-Generative-AI-Studio.jpg"><h3>IIT Kanpur</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Cloud.svg" alt="Power BI"></span></div>
-<div class="card"><img src="https://miro.medium.com/1*o308qe3XWZNePCd4VQWYCA.jpeg"><h3>IIT Hyderabad</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Hackerrank.svg" alt="Power BI"></span></div>
-<div class="card"><img src="https://imgv2-2-f.scribdassets.com/img/document/924090749/original/d47f0b1c02/1?v=1"><h3>IIT Roorkee</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Canva.svg" alt="Power BI"></span></div>
-<div class="card"><img src="https://i.ytimg.com/vi/rLXDx92S-5Y/maxresdefault.jpg"><h3>IIT Dhanbad</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Tata.svg" alt="Power BI"></span></div>
-<div class="card"><img src="https://blog.jakelee.co.uk/assets/images/banners/github-certification.png"><h3>IIT Patna</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/GitViolet.svg" alt="Power BI"></span></div>
-<div class="card"><img src="https://media.licdn.com/dms/image/v2/C5612AQH_bg_XkATpIQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1588579463056?e=2147483647&v=beta&t=QA2C4RflB43_JzGxdUcouLZrfJEAYwqwDa6r5zmSGjQ"><h3>IIT Madras</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/LinkedIn.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://miro.medium.com/1*WnRXab-sreS-KePoZMYqKQ.jpeg"><h3>Google Data Analysis</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Google.svg" alt="Google"></span></div>
+<div class="card"><img src="https://media.licdn.com/dms/image/v2/D4D12AQFXbkwFv_t1VA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1698724527451?e=2147483647&v=beta&t=8dB8YVlvzI5o4rs5_xDoqwCgJ8twJa-_E55TxxzQaZc"><h3>Power BI Data Analyst</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Microsoft.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://www.simplilearn.com/ice9/skillupcertificates/Introduction-to-Generative-AI-Studio.jpg"><h3>Generative AI Studio</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Cloud.svg" alt="Cloud"></span></div>
+<div class="card"><img src="https://miro.medium.com/1*o308qe3XWZNePCd4VQWYCA.jpeg"><h3>Hackerrank SQL Basic</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Hackerrank.svg" alt="Hackerrank"></span></div>
+<div class="card"><img src="https://imgv2-2-f.scribdassets.com/img/document/924090749/original/d47f0b1c02/1?v=1"><h3>Canva Essentials</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Canva.svg" alt="Canva"></span></div>
+<div class="card"><img src="https://www.sainiji.com/wp-content/uploads/2023/01/20230111_110512.jpg"><h3>Data visualization</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/Tata.svg" alt="Power BI"></span></div>
+<div class="card"><img src="https://blog.jakelee.co.uk/assets/images/banners/github-certification.png"><h3>GitHub Foundations</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/GitHub.svg" alt="GitHub"></span></div>
+<div class="card"><img src="https://media.licdn.com/dms/image/v2/D4E22AQHlHBz3s13p2Q/feedshare-shrink_800/feedshare-shrink_800/0/1689182467719?e=2147483647&v=beta&t=ziqcRHWCTxlKPKbpsumAHCzuZG7Fzfw3PhE995XeBlE"><h3>Project Management</h3><a href="https://www.linkedin.com/learning/certificates/369c5ca223fd3891cc3766d616d016e2312106e6aba79e4f3a52ac63a3de4b80" target="_blank"><button class="btn">Show Credential↗</button></a> <span class="small-icon"> <img src="images/LinkedIn.svg" alt="Power BI"></span></div>
 </div>
 </section>
 
